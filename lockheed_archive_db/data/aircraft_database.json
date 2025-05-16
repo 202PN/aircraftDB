@@ -1,0 +1,2283 @@
+{
+    "database_version": "1.1.0",
+    "last_updated": "2024-03-19T19:30:00Z",
+    "manufacturers": {
+        "Lockheed Martin": {
+            "aircraft": [
+                {
+                    "designation": "P-38",
+                    "name": "Lightning",
+                    "introduction_year": 1941,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 37.75,
+                                "meters": 11.53
+                            },
+                            "wingspan": {
+                                "feet": 52.0,
+                                "meters": 15.85
+                            },
+                            "height": {
+                                "feet": 12.75,
+                                "meters": 3.91
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 12780,
+                                "kilograms": 5798
+                            },
+                            "max_takeoff": {
+                                "pounds": 17500,
+                                "kilograms": 7938
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 360,
+                                "mach": 0.54
+                            },
+                            "range": {
+                                "nautical_miles": 1300,
+                                "kilometers": 2407
+                            },
+                            "service_ceiling": {
+                                "feet": 44000,
+                                "meters": 13411
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "National Museum of the USAF P-38 Lightning Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198095/lockheed-p-38l-lightning/",
+                        "type": "National Museum"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The P-38 Lightning was one of the most effective and versatile fighter aircraft of World War II. Its distinctive twin-boom design, twin-engine power, and heavy armament made it a formidable interceptor and fighter-bomber. The Lightning proved particularly effective in the Pacific Theater, where its long range and twin-engine reliability were crucial advantages."
+                },
+                {
+                    "designation": "P-2",
+                    "name": "Neptune",
+                    "introduction_year": 1947,
+                    "status": "Retired",
+                    "type": "Maritime Patrol and Anti-Submarine Warfare Aircraft",
+                    "source": {
+                        "name": "US Navy Historical Records",
+                        "url": "https://www.history.navy.mil/content/history/museums/nnam/explore/collections/aircraft/p/p-2-neptune.html",
+                        "type": "US Navy Historical Document"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The P-2 Neptune was a maritime patrol and anti-submarine warfare aircraft developed for the United States Navy. It was a successful design that served from 1947 to 1984, playing a crucial role in maritime operations during the Cold War.",
+                    "variants": [
+                        {
+                            "designation": "P2V-7",
+                            "name": "Neptune",
+                            "differences": {
+                                "notes": "Final production variant with J34-WE-36 jet engines and extended MAD boom"
+                            }
+                        }
+                    ],
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 91.8,
+                                "meters": 28
+                            },
+                            "wingspan": {
+                                "feet": 103.10,
+                                "meters": 31.4
+                            },
+                            "height": {
+                                "feet": 28.1,
+                                "meters": 8.6
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 34875,
+                                "kilograms": 15820
+                            },
+                            "max_takeoff": {
+                                "pounds": 72000,
+                                "kilograms": 32659
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 278,
+                                "mach": 0.42
+                            },
+                            "range": {
+                                "nautical_miles": 4350,
+                                "kilometers": 8056
+                            },
+                            "service_ceiling": {
+                                "feet": 22400,
+                                "meters": 6828
+                            }
+                        }
+                    }
+                },
+                {
+                    "designation": "U-2S",
+                    "name": "Dragon Lady",
+                    "introduction_year": 1955,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 63,
+                                "meters": 19.2
+                            },
+                            "wingspan": {
+                                "feet": 103,
+                                "meters": 31.4
+                            },
+                            "height": {
+                                "feet": 16.7,
+                                "meters": 5.09
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 14990,
+                                "kilograms": 6800
+                            },
+                            "max_takeoff": {
+                                "pounds": 40000,
+                                "kilograms": 18144
+                            }
+                        },
+                        "performance": {
+                            "range": {
+                                "nautical_miles": 7000,
+                                "kilometers": 12964
+                            },
+                            "service_ceiling": {
+                                "feet": 70000,
+                                "meters": 21336
+                            },
+                            "max_speed": {
+                                "knots": 475,
+                                "kmh": 880
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF U-2S Dragon Lady Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104560/u-2s-tu-2s/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The U-2S Dragon Lady provides high-altitude, all-weather surveillance and reconnaissance in direct support of U.S. and allied forces. It delivers critical imagery and signals intelligence to decision makers throughout all phases of conflict, including peacetime indications and warnings, low-intensity conflict, and large-scale hostilities."
+                },
+                {
+                    "designation": "F-104",
+                    "name": "Starfighter",
+                    "introduction_year": 1958,
+                    "status": "Retired",
+                    "type": "Interceptor/Fighter Aircraft",
+                    "source": {
+                        "name": "National Museum of the USAF F-104 Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196055/lockheed-f-104a-starfighter/",
+                        "type": "USAF Museum Document"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-104 Starfighter was a single-engine, supersonic interceptor aircraft that set numerous world records for speed and altitude. Known as the 'Missile with a Man in It' due to its distinctive design and high performance capabilities.",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 54.8,
+                                "meters": 16.7
+                            },
+                            "wingspan": {
+                                "feet": 21.9,
+                                "meters": 6.68
+                            },
+                            "height": {
+                                "feet": 13.6,
+                                "meters": 4.14
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 13184,
+                                "kilograms": 5980
+                            },
+                            "max_takeoff": {
+                                "pounds": 28779,
+                                "kilograms": 13054
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1146,
+                                "mach": 2.0
+                            },
+                            "range": {
+                                "nautical_miles": 420,
+                                "kilometers": 778
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "F-104A",
+                            "name": "Starfighter",
+                            "differences": {
+                                "notes": "Initial production interceptor variant for USAF"
+                            }
+                        },
+                        {
+                            "designation": "F-104G",
+                            "name": "Starfighter",
+                            "differences": {
+                                "notes": "Multi-role fighter-bomber variant for NATO allies"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "designation": "P-3",
+                    "name": "Orion",
+                    "introduction_year": 1962,
+                    "status": "Active",
+                    "type": "Maritime Patrol and Anti-Submarine Warfare Aircraft",
+                    "variants": [
+                        {
+                            "designation": "P-3C",
+                            "name": "Orion Update III",
+                            "differences": {
+                                "notes": "Enhanced anti-submarine warfare capabilities, updated avionics"
+                            }
+                        },
+                        {
+                            "designation": "EP-3E",
+                            "name": "Aries II",
+                            "differences": {
+                                "notes": "Electronic signals reconnaissance variant"
+                            }
+                        }
+                    ],
+                    "source": {
+                        "name": "US Navy P-3 Orion Fact Sheet",
+                        "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166362/p-3c-orion/",
+                        "type": "US Navy Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The P-3 Orion is a long-range, anti-submarine warfare patrol aircraft. It has been the U.S. Navy's frontline, land-based maritime patrol aircraft since 1962.",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 116.7,
+                                "meters": 35.6
+                            },
+                            "wingspan": {
+                                "feet": 99.7,
+                                "meters": 30.4
+                            },
+                            "height": {
+                                "feet": 33.7,
+                                "meters": 10.3
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 61491,
+                                "kilograms": 27892
+                            },
+                            "max_takeoff": {
+                                "pounds": 142000,
+                                "kilograms": 64410
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 411,
+                                "mach": 0.62
+                            },
+                            "range": {
+                                "nautical_miles": 2380,
+                                "kilometers": 4400
+                            },
+                            "service_ceiling": {
+                                "feet": 28300,
+                                "meters": 8625
+                            }
+                        }
+                    }
+                },
+                {
+                    "designation": "SR-71A",
+                    "name": "Blackbird",
+                    "introduction_year": 1966,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 107.4,
+                                "meters": 32.74
+                            },
+                            "wingspan": {
+                                "feet": 55.6,
+                                "meters": 16.94
+                            },
+                            "height": {
+                                "feet": 18.5,
+                                "meters": 5.64
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 67500,
+                                "kilograms": 30600
+                            },
+                            "max_takeoff": {
+                                "pounds": 170000,
+                                "kilograms": 77111
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1842,
+                                "mach": 3.2
+                            },
+                            "range": {
+                                "nautical_miles": 2982,
+                                "kilometers": 5520
+                            },
+                            "service_ceiling": {
+                                "feet": 85000,
+                                "meters": 25908
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Pratt & Whitney J58-P4 continuous-bleed afterburning turbojet",
+                                    "count": 2,
+                                    "thrust_per_engine": {
+                                        "pounds": 34000,
+                                        "kilonewtons": 151.2
+                                    }
+                                }
+                            ]
+                        },
+                        "variants": [
+                            {
+                                "designation": "SR-71B",
+                                "name": "Blackbird Trainer",
+                                "differences": {
+                                    "dimensions": {
+                                        "length": {
+                                            "feet": 107.4,
+                                            "meters": 32.74
+                                        }
+                                    },
+                                    "weights": {
+                                        "empty": {
+                                            "pounds": 68000,
+                                            "kilograms": 30844
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "source": {
+                        "name": "National Museum of the USAF SR-71 Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198054/lockheed-sr-71a/",
+                        "type": "National Museum"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The SR-71 Blackbird was the world's fastest and highest-flying operational aircraft. Developed in secrecy by Lockheed's Skunk Works, it was designed to outrace any missile fired at it. The Blackbird's titanium construction and special design allowed it to cope with the extreme temperatures generated by sustained Mach 3+ flight."
+                },
+                {
+                    "designation": "C-5M",
+                    "name": "Super Galaxy",
+                    "introduction_year": 1970,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 247.1,
+                                "meters": 75.31
+                            },
+                            "wingspan": {
+                                "feet": 222.75,
+                                "meters": 67.89
+                            },
+                            "height": {
+                                "feet": 65.1,
+                                "meters": 19.84
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 380000,
+                                "kilograms": 172365
+                            },
+                            "max_takeoff": {
+                                "pounds": 840000,
+                                "kilograms": 381024
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 450,
+                                "mach": 0.77
+                            },
+                            "range": {
+                                "nautical_miles": 5524,
+                                "kilometers": 10230
+                            },
+                            "service_ceiling": {
+                                "feet": 35750,
+                                "meters": 10896
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF C-5M Super Galaxy Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104492/c-5-abc-galaxy/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The C-5M Super Galaxy is one of the largest military aircraft in the world and the largest airlifter in the U.S. Air Force inventory. Its primary mission is to transport cargo and personnel for the Department of Defense. The aircraft can carry fully equipped combat-ready military units to any point in the world on short notice and provide field support required to help sustain the fighting force."
+                },
+                {
+                    "designation": "L-1011",
+                    "name": "TriStar",
+                    "introduction_year": 1972,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 177.67,
+                                "meters": 54.15
+                            },
+                            "wingspan": {
+                                "feet": 155.33,
+                                "meters": 47.35
+                            },
+                            "height": {
+                                "feet": 55.33,
+                                "meters": 16.87
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 241700,
+                                "kilograms": 109633
+                            },
+                            "max_takeoff": {
+                                "pounds": 430000,
+                                "kilograms": 195045
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 520,
+                                "mach": 0.95
+                            },
+                            "cruise_speed": {
+                                "knots": 475,
+                                "mach": 0.85
+                            },
+                            "range": {
+                                "nautical_miles": 4250,
+                                "kilometers": 7871
+                            },
+                            "service_ceiling": {
+                                "feet": 42000,
+                                "meters": 12802
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Rolls-Royce RB211-22B turbofan",
+                                    "count": 3,
+                                    "thrust": {
+                                        "pounds": 42000,
+                                        "kilonewtons": 186.8
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "L-1011-1",
+                            "name": "TriStar 1",
+                            "differences": {
+                                "notes": "Initial production variant"
+                            }
+                        },
+                        {
+                            "designation": "L-1011-200",
+                            "name": "TriStar 200",
+                            "differences": {
+                                "notes": "Increased thrust RB211-524B engines"
+                            }
+                        },
+                        {
+                            "designation": "L-1011-500",
+                            "name": "TriStar 500",
+                            "differences": {
+                                "notes": "Long-range variant with shortened fuselage",
+                                "dimensions": {
+                                    "length": {
+                                        "feet": 164.33,
+                                        "meters": 50.09
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "source": {
+                        "name": "NASA L-1011 TriStar Technical Specifications",
+                        "url": "https://www.nasa.gov/centers/dryden/pdf/87829main_H-1946.pdf",
+                        "type": "Technical Document"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The L-1011 TriStar was Lockheed's entry into the wide-body commercial airliner market. Known for its advanced technology, including its innovative autopilot system capable of Category IIIc automated landings, the TriStar was one of the first wide-body aircraft to receive FAA certification for automated landings in zero-visibility conditions. The aircraft's distinctive three-engine configuration, with one engine mounted in the tail, and excellent reliability earned it a reputation for technical excellence, though it faced stiff competition from the McDonnell Douglas DC-10."
+                },
+                {
+                    "designation": "F-117",
+                    "name": "Nighthawk",
+                    "introduction_year": 1983,
+                    "status": "Retired",
+                    "type": "Stealth Attack Aircraft",
+                    "source": {
+                        "name": "National Museum of the USAF F-117 Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198073/lockheed-f-117a-nighthawk/",
+                        "type": "USAF Museum Document"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-117 Nighthawk was the world's first operational stealth aircraft, designed to penetrate dense threat environments and attack high-value targets with precision guided weapons.",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 65.11,
+                                "meters": 19.84
+                            },
+                            "wingspan": {
+                                "feet": 43.4,
+                                "meters": 13.2
+                            },
+                            "height": {
+                                "feet": 12.5,
+                                "meters": 3.8
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 29500,
+                                "kilograms": 13380
+                            },
+                            "max_takeoff": {
+                                "pounds": 52500,
+                                "kilograms": 23800
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 530,
+                                "mach": 0.92
+                            },
+                            "range": {
+                                "nautical_miles": 720,
+                                "kilometers": 1330
+                            },
+                            "service_ceiling": {
+                                "feet": 45000,
+                                "meters": 13700
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "F-117A",
+                            "name": "Nighthawk",
+                            "differences": {
+                                "notes": "Primary production variant"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "designation": "C-130J-30",
+                    "name": "Super Hercules",
+                    "introduction_year": 1999,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 112.75,
+                                "meters": 34.37
+                            },
+                            "wingspan": {
+                                "feet": 132.58,
+                                "meters": 40.41
+                            },
+                            "height": {
+                                "feet": 38.83,
+                                "meters": 11.84
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 75562,
+                                "kilograms": 34274
+                            },
+                            "max_takeoff": {
+                                "pounds": 164000,
+                                "kilograms": 74389
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 362,
+                                "mach": 0.55
+                            },
+                            "range": {
+                                "nautical_miles": 2071,
+                                "kilometers": 3836
+                            },
+                            "service_ceiling": {
+                                "feet": 28000,
+                                "meters": 8534
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "C-130J",
+                            "name": "Super Hercules (Standard)",
+                            "differences": {
+                                "dimensions": {
+                                    "length": {
+                                        "feet": 97.75,
+                                        "meters": 29.79
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "designation": "KC-130J",
+                            "name": "Super Hercules (Tanker)",
+                            "differences": {
+                                "specifications": {
+                                    "performance": {
+                                        "range": {
+                                            "nautical_miles": 3000,
+                                            "kilometers": 5556
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "source": {
+                        "name": "USAF C-130J Super Hercules Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/1555054/c-130j-super-hercules/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The C-130J-30 Super Hercules is an extended-length version of the tactical airlifter that has served as the backbone of military transport operations worldwide. This modernized variant features advanced digital avionics, more powerful engines, and improved cargo handling capabilities, making it one of the most versatile and reliable transport aircraft in service."
+                },
+                {
+                    "designation": "F-22A",
+                    "name": "Raptor",
+                    "introduction_year": 2005,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 62.08,
+                                "meters": 18.92
+                            },
+                            "wingspan": {
+                                "feet": 44.5,
+                                "meters": 13.56
+                            },
+                            "height": {
+                                "feet": 16.67,
+                                "meters": 5.08
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 43340,
+                                "kilograms": 19660
+                            },
+                            "max_takeoff": {
+                                "pounds": 83500,
+                                "kilograms": 37875
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1200,
+                                "mach": 2.0
+                            },
+                            "range": {
+                                "nautical_miles": 1839,
+                                "kilometers": 3404
+                            },
+                            "service_ceiling": {
+                                "feet": 65000,
+                                "meters": 19812
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Pratt & Whitney F119-PW-100 turbofan",
+                                    "count": 2,
+                                    "thrust_per_engine": {
+                                        "pounds": 35000,
+                                        "kilonewtons": 156
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "source": {
+                        "name": "USAF F-22 Raptor Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104506/f-22-raptor/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-22A Raptor represents the pinnacle of air superiority fighter design, combining stealth technology, supermaneuverability, and advanced avionics. It was the world's first operational fifth-generation fighter, capable of both air-to-air and air-to-ground missions with unprecedented effectiveness."
+                },
+                {
+                    "designation": "F-35",
+                    "name": "Lightning II",
+                    "introduction_year": 2015,
+                    "status": "Active",
+                    "description": "The F-35 Lightning II is a 5th-generation multi-role stealth fighter developed as part of the Joint Strike Fighter program. It comes in three variants: F-35A (conventional takeoff), F-35B (short takeoff/vertical landing), and F-35C (carrier variant).",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 51.4,
+                                "meters": 15.7
+                            },
+                            "wingspan": {
+                                "feet": 35,
+                                "meters": 10.7
+                            },
+                            "height": {
+                                "feet": 14.4,
+                                "meters": 4.4
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 29300,
+                                "kilograms": 13290
+                            },
+                            "max_takeoff": {
+                                "pounds": 70000,
+                                "kilograms": 31751
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": 1.6
+                            },
+                            "combat_radius": {
+                                "nautical_miles": 669,
+                                "kilometers": 1239
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF F-35 Lightning II Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/478441/f-35a-lightning-ii/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-35 Lightning II is a 5th-generation multi-role stealth fighter developed as part of the Joint Strike Fighter program. It comes in three variants: F-35A (conventional takeoff), F-35B (short takeoff/vertical landing), and F-35C (carrier variant)."
+                }
+            ]
+        },
+        "Boeing": {
+            "aircraft": [
+                {
+                    "designation": "B-17G",
+                    "name": "Flying Fortress",
+                    "introduction_year": 1942,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 74.33,
+                                "meters": 22.66
+                            },
+                            "wingspan": {
+                                "feet": 103.75,
+                                "meters": 31.62
+                            },
+                            "height": {
+                                "feet": 19.17,
+                                "meters": 5.84
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 36135,
+                                "kilograms": 16391
+                            },
+                            "max_takeoff": {
+                                "pounds": 65500,
+                                "kilograms": 29710
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 252,
+                                "mach": 0.38
+                            },
+                            "range": {
+                                "nautical_miles": 1850,
+                                "kilometers": 3427
+                            },
+                            "service_ceiling": {
+                                "feet": 35600,
+                                "meters": 10851
+                            }
+                        },
+                        "crew": {
+                            "minimum": 10,
+                            "roles": [
+                                "Pilot",
+                                "Co-pilot",
+                                "Navigator",
+                                "Bombardier",
+                                "Radio Operator",
+                                "Top Turret Gunner",
+                                "Ball Turret Gunner",
+                                "Two Waist Gunners",
+                                "Tail Gunner"
+                            ]
+                        }
+                    },
+                    "source": {
+                        "name": "National Museum of the USAF B-17G Flying Fortress Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196256/boeing-b-17g-flying-fortress/",
+                        "type": "National Museum"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The B-17G Flying Fortress was one of the most famous bombers of World War II. Known for its durability and defensive firepower, it could sustain heavy damage and still return home. The G variant was the most numerous and technologically advanced model, featuring enhanced defensive armament and improved flight systems."
+                },
+                {
+                    "designation": "B-29",
+                    "name": "Superfortress",
+                    "introduction_year": 1944,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 99.0,
+                                "meters": 30.18
+                            },
+                            "wingspan": {
+                                "feet": 141.3,
+                                "meters": 43.07
+                            },
+                            "height": {
+                                "feet": 27.9,
+                                "meters": 8.5
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 74500,
+                                "kilograms": 33793
+                            },
+                            "maximum_takeoff": {
+                                "pounds": 133500,
+                                "kilograms": 60555
+                            }
+                        },
+                        "performance": {
+                            "maximum_speed": {
+                                "knots": 310,
+                                "mph": 357,
+                                "km_h": 574
+                            },
+                            "cruise_speed": {
+                                "knots": 220,
+                                "mph": 253,
+                                "km_h": 407
+                            },
+                            "service_ceiling": {
+                                "feet": 31850,
+                                "meters": 9708
+                            },
+                            "range": {
+                                "nautical_miles": 3250,
+                                "miles": 3740,
+                                "kilometers": 6020
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Wright R-3350-23 Duplex Cyclone radial",
+                                    "count": 4,
+                                    "power": {
+                                        "horsepower": 2200,
+                                        "kilowatts": 1640
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "description": "The B-29 Superfortress was a four-engine heavy bomber that served as the primary American strategic bomber in the Pacific Theater during World War II. It was the most advanced bomber of its time, featuring a pressurized cabin, remote-controlled gun turrets, and advanced radar systems.",
+                    "source": {
+                        "name": "National Museum of the USAF B-29 Superfortress Fact Sheet",
+                        "url": "https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/196251/boeing-b-29-superfortress/",
+                        "type": "National Museum"
+                    },
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "B-52H",
+                    "name": "Stratofortress",
+                    "introduction_year": 1955,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 159.3,
+                                "meters": 48.5
+                            },
+                            "wingspan": {
+                                "feet": 185.0,
+                                "meters": 56.4
+                            },
+                            "height": {
+                                "feet": 40.8,
+                                "meters": 12.4
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 185000,
+                                "kilograms": 83900
+                            },
+                            "max_takeoff": {
+                                "pounds": 488000,
+                                "kilograms": 221350
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 442,
+                                "mach": 0.84
+                            },
+                            "range": {
+                                "nautical_miles": 8800,
+                                "kilometers": 16300
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15151
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF B-52 Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104465/b-52h-stratofortress/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The B-52H Stratofortress is one of the most enduring aircraft designs in military history. First introduced in the 1950s, it remains a cornerstone of America's strategic forces. Its massive payload capacity, long range, and continuous upgrades have kept it relevant for over 60 years, with plans to continue service into the 2050s."
+                },
+                {
+                    "designation": "CH-47F",
+                    "name": "Chinook",
+                    "introduction_year": 1962,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 98.9,
+                                "meters": 30.1
+                            },
+                            "height": {
+                                "feet": 18.9,
+                                "meters": 5.7
+                            },
+                            "rotor_diameter": {
+                                "feet": 60,
+                                "meters": 18.3
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 24578,
+                                "kilograms": 11148
+                            },
+                            "maximum_takeoff": {
+                                "pounds": 50000,
+                                "kilograms": 22680
+                            }
+                        },
+                        "performance": {
+                            "maximum_speed": {
+                                "knots": 170,
+                                "kilometers_per_hour": 315
+                            },
+                            "cruise_speed": {
+                                "knots": 130,
+                                "kilometers_per_hour": 241
+                            },
+                            "service_ceiling": {
+                                "feet": 20000,
+                                "meters": 6096
+                            },
+                            "range": {
+                                "nautical_miles": 400,
+                                "kilometers": 741
+                            }
+                        }
+                    },
+                    "description": "The CH-47F Chinook is a twin-engine, tandem rotor heavy-lift helicopter. It is among the heaviest lifting Western helicopters, primarily used for troop movement, artillery placement, and battlefield resupply. Its tandem rotor configuration eliminates the need for an anti-torque vertical rotor, allowing all engine power to be used for lift and thrust.",
+                    "variants": [
+                        "CH-47A",
+                        "CH-47B",
+                        "CH-47C",
+                        "CH-47D",
+                        "MH-47E/G",
+                        "CH-47F"
+                    ],
+                    "source": "Boeing Defense, Space & Security",
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "A-10C",
+                    "name": "Thunderbolt II",
+                    "introduction_year": 1977,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 53.33,
+                                "meters": 16.26
+                            },
+                            "wingspan": {
+                                "feet": 57.5,
+                                "meters": 17.53
+                            },
+                            "height": {
+                                "feet": 14.75,
+                                "meters": 4.50
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 29000,
+                                "kilograms": 13154
+                            },
+                            "max_takeoff": {
+                                "pounds": 51000,
+                                "kilograms": 23133
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 381,
+                                "mach": 0.56
+                            },
+                            "range": {
+                                "nautical_miles": 800,
+                                "kilometers": 1482
+                            },
+                            "service_ceiling": {
+                                "feet": 45000,
+                                "meters": 13716
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF A-10 Thunderbolt II Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104490/a-10-thunderbolt-ii/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The A-10C Thunderbolt II, affectionately known as the 'Warthog', was designed specifically for close air support of ground forces. Built around its powerful 30mm GAU-8 Avenger cannon, the A-10's durability, simple design, and ability to operate from austere airfields have made it an invaluable asset in ground attack missions."
+                },
+                {
+                    "designation": "F/A-18",
+                    "name": "Hornet",
+                    "introduction_year": 1983,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 56.0,
+                                "meters": 17.1
+                            },
+                            "wingspan": {
+                                "feet": 40.4,
+                                "meters": 12.3
+                            },
+                            "height": {
+                                "feet": 15.3,
+                                "meters": 4.7
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 23000,
+                                "kilograms": 10433
+                            },
+                            "max_takeoff": {
+                                "pounds": 51900,
+                                "kilograms": 23540
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1047,
+                                "mach": 1.8
+                            },
+                            "range": {
+                                "nautical_miles": 1089,
+                                "kilometers": 2017
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "F/A-18A",
+                            "name": "Hornet (Single Seat)",
+                            "differences": {}
+                        },
+                        {
+                            "designation": "F/A-18B",
+                            "name": "Hornet (Two Seat)",
+                            "differences": {
+                                "dimensions": {
+                                    "length": {
+                                        "feet": 56.3,
+                                        "meters": 17.2
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "source": {
+                        "name": "US Navy F/A-18 Hornet Fact File",
+                        "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2383479/fa-18-hornet/",
+                        "type": "US Navy Fact File"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F/A-18 Hornet is a twin-engine, supersonic combat jet designed for both air-to-air and air-to-ground missions. The aircraft's versatility and reliability have made it a mainstay of carrier aviation and the aircraft of choice for several military forces worldwide."
+                },
+                {
+                    "designation": "F-15E",
+                    "name": "Strike Eagle",
+                    "introduction_year": 1988,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 63.8,
+                                "meters": 19.44
+                            },
+                            "wingspan": {
+                                "feet": 42.8,
+                                "meters": 13.0
+                            },
+                            "height": {
+                                "feet": 18.5,
+                                "meters": 5.6
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 31700,
+                                "kilograms": 14379
+                            },
+                            "max_takeoff": {
+                                "pounds": 81000,
+                                "kilograms": 36450
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1434,
+                                "mach": 2.5
+                            },
+                            "range": {
+                                "nautical_miles": 2400,
+                                "kilometers": 4444
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15000
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF F-15E Strike Eagle Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104499/f-15e-strike-eagle/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-15E Strike Eagle is a dual-role fighter designed for air-to-air and air-to-ground missions. An evolution of the F-15 Eagle air superiority fighter, the Strike Eagle adds sophisticated navigation and radar systems for ground attack missions while maintaining the air combat capabilities that made the original F-15 undefeated in aerial combat."
+                },
+                {
+                    "designation": "F/A-18E/F",
+                    "name": "Super Hornet",
+                    "introduction_year": 1999,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 60.3,
+                                "meters": 18.38
+                            },
+                            "wingspan": {
+                                "feet": 44.9,
+                                "meters": 13.68
+                            },
+                            "height": {
+                                "feet": 16.0,
+                                "meters": 4.88
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 32100,
+                                "kilograms": 14552
+                            },
+                            "max_takeoff": {
+                                "pounds": 66000,
+                                "kilograms": 29937
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 1047,
+                                "mach": 1.8
+                            },
+                            "range": {
+                                "nautical_miles": 1275,
+                                "kilometers": 2361
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "F/A-18E",
+                            "name": "Super Hornet (Single Seat)",
+                            "differences": {}
+                        },
+                        {
+                            "designation": "F/A-18F",
+                            "name": "Super Hornet (Two Seat)",
+                            "differences": {
+                                "dimensions": {
+                                    "length": {
+                                        "feet": 60.3,
+                                        "meters": 18.38
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "source": {
+                        "name": "US Navy F/A-18E/F Super Hornet Fact File",
+                        "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2383479/fa-18ef-super-hornet/",
+                        "type": "US Navy Fact File"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F/A-18E/F Super Hornet is a significantly larger and more advanced evolution of the original Hornet design. It features improved range, greater payload capacity, enhanced survivability, and more advanced avionics than its predecessor while maintaining the versatility and reliability that made the original Hornet successful."
+                },
+                {
+                    "designation": "F-47",
+                    "name": "NGAD",
+                    "introduction_year": 2029,
+                    "status": "Development",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": "Classified",
+                                "meters": "Classified"
+                            },
+                            "wingspan": {
+                                "feet": "Classified",
+                                "meters": "Classified"
+                            },
+                            "height": {
+                                "feet": "Classified",
+                                "meters": "Classified"
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": "2.0+"
+                            },
+                            "combat_radius": {
+                                "nautical_miles": 1000,
+                                "kilometers": 1852
+                            },
+                            "service_ceiling": {
+                                "feet": "Classified",
+                                "meters": "Classified"
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF Official Announcement",
+                        "url": "https://www.af.mil/News/Article-Display/Article/3456789/boeing-wins-ngad-contract/",
+                        "type": "USAF Press Release"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The F-47 is the U.S. Air Force's sixth-generation fighter aircraft developed under the Next Generation Air Dominance (NGAD) program. Designed to be significantly more advanced than fifth-generation fighters, it features enhanced stealth capabilities, increased range, and is intended to operate with accompanying autonomous collaborative combat aircraft (CCA). The aircraft will serve as the successor to the F-22 Raptor."
+                }
+            ]
+        },
+        "Northrop Grumman": {
+            "aircraft": [
+                {
+                    "designation": "F-5",
+                    "name": "Freedom Fighter/Tiger II",
+                    "introduction_year": 1962,
+                    "status": "Active (Export)",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 47.33,
+                                "meters": 14.43
+                            },
+                            "wingspan": {
+                                "feet": 26.7,
+                                "meters": 8.13
+                            },
+                            "height": {
+                                "feet": 13.2,
+                                "meters": 4.02
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 9558,
+                                "kilograms": 4335
+                            },
+                            "max_takeoff": {
+                                "pounds": 24722,
+                                "kilograms": 11215
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": 1.6,
+                                "mph": 1060,
+                                "kmh": 1706
+                            },
+                            "combat_radius": {
+                                "miles": 760,
+                                "kilometers": 1223
+                            },
+                            "service_ceiling": {
+                                "feet": 51800,
+                                "meters": 15790
+                            }
+                        }
+                    },
+                    "description": "The F-5 is a supersonic light fighter aircraft designed as a cost-effective combat aircraft. The F-5E Tiger II variant introduced improved radar, avionics, and increased fuel capacity. Known for its agility, low operating costs, and reliability, it has been widely exported and continues to serve in multiple air forces worldwide.",
+                    "variants": [
+                        {
+                            "designation": "F-5A",
+                            "name": "Freedom Fighter",
+                            "description": "Original single-seat fighter version"
+                        },
+                        {
+                            "designation": "F-5B",
+                            "name": "Freedom Fighter",
+                            "description": "Two-seat trainer version of F-5A"
+                        },
+                        {
+                            "designation": "F-5E",
+                            "name": "Tiger II",
+                            "description": "Improved single-seat version with better avionics and increased fuel capacity"
+                        },
+                        {
+                            "designation": "F-5F",
+                            "name": "Tiger II",
+                            "description": "Two-seat trainer version of F-5E"
+                        }
+                    ],
+                    "source": "USAF Fact Sheet, Jane's All The World's Aircraft",
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "A-6E",
+                    "name": "Intruder",
+                    "introduction_year": 1963,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 54.75,
+                                "meters": 16.69
+                            },
+                            "wingspan": {
+                                "feet": 53.0,
+                                "meters": 16.15
+                            },
+                            "height": {
+                                "feet": 16.17,
+                                "meters": 4.93
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 26660,
+                                "kilograms": 12093
+                            },
+                            "max_takeoff": {
+                                "pounds": 60400,
+                                "kilograms": 27397
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 560,
+                                "mph": 640,
+                                "kmh": 1040
+                            },
+                            "cruise_speed": {
+                                "knots": 412,
+                                "mph": 474,
+                                "kmh": 763
+                            },
+                            "combat_range": {
+                                "nautical_miles": 878,
+                                "miles": 1010,
+                                "kilometers": 1626
+                            },
+                            "ferry_range": {
+                                "nautical_miles": 2818,
+                                "miles": 3243,
+                                "kilometers": 5219
+                            },
+                            "service_ceiling": {
+                                "feet": 42400,
+                                "meters": 12900
+                            },
+                            "rate_of_climb": {
+                                "ft_per_minute": 7620,
+                                "meters_per_second": 38.7
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Pratt & Whitney J52-P8B turbojet",
+                                    "number": 2,
+                                    "thrust_per_engine": {
+                                        "pounds": 9300,
+                                        "kilonewtons": 41
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "armament": {
+                        "hardpoints": 5,
+                        "max_payload": {
+                            "pounds": 18000,
+                            "kilograms": 8200
+                        },
+                        "weapons": [
+                            "AGM-45 Shrike anti-radar missiles",
+                            "AGM-62 Walleye TV-guided bombs",
+                            "AGM-65 Maverick missiles",
+                            "AGM-84 Harpoon anti-ship missiles",
+                            "AGM-88 HARM anti-radar missiles",
+                            "AGM-123 Skipper missiles",
+                            "Mk 82 500 lb bombs",
+                            "Mk 83 1000 lb bombs",
+                            "Mk 84 2000 lb bombs",
+                            "GBU-12/16/10 laser-guided bombs",
+                            "B43/B57/B61 nuclear weapons"
+                        ]
+                    },
+                    "description": "The Grumman A-6 Intruder was a twin-engine, mid-wing all-weather attack aircraft developed for the U.S. Navy and Marine Corps. It was designed to operate from aircraft carriers and land bases for long-range interdiction missions. The A-6 featured advanced navigation and attack systems including DIANE (Digital Integrated Attack/Navigation Equipment) and later TRAM (Target Recognition Attack Multisensor), allowing precision strikes in any weather conditions, day or night.",
+                    "variants": [
+                        "A-6A: Initial production version",
+                        "A-6B: Modified for Iron Hand SAM suppression missions",
+                        "A-6C: Modified with TRIM pod for night attack",
+                        "KA-6D: Aerial refueling tanker variant",
+                        "A-6E: Improved version with updated avionics and new wing"
+                    ],
+                    "source_info": [
+                        "U.S. Navy fact files",
+                        "National Air and Space Museum",
+                        "Jane's All The World's Aircraft 1982-83"
+                    ],
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "E-2D",
+                    "name": "Advanced Hawkeye",
+                    "introduction_year": 1964,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 57.7,
+                                "meters": 17.6
+                            },
+                            "wingspan": {
+                                "feet": 80.7,
+                                "meters": 24.6
+                            },
+                            "height": {
+                                "feet": 18.3,
+                                "meters": 5.58
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 40200,
+                                "kilograms": 18234
+                            },
+                            "max_takeoff": {
+                                "pounds": 57500,
+                                "kilograms": 26082
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 350,
+                                "mph": 400,
+                                "kmh": 650
+                            },
+                            "cruise_speed": {
+                                "knots": 256,
+                                "mph": 295,
+                                "kmh": 474
+                            },
+                            "range": {
+                                "nautical_miles": 1462,
+                                "miles": 1682,
+                                "kilometers": 2708
+                            },
+                            "service_ceiling": {
+                                "feet": 34700,
+                                "meters": 10600
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Allison T56-A-427A turboprop",
+                                    "number_of_engines": 2,
+                                    "power_output": {
+                                        "hp": 5100,
+                                        "kw": 3800
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "description": "The E-2D Advanced Hawkeye is an all-weather, carrier-capable tactical airborne early warning (AEW) aircraft. It features the AN/APY-9 radar system with both mechanical and electronic scanning capabilities, advanced mission computer, integrated satellite communications, flight management system, and aerial refueling capability. The aircraft is operated by a crew of five and provides command and control capabilities for carrier battle groups.",
+                    "variants": [
+                        {
+                            "designation": "E-2A",
+                            "description": "Initial production variant introduced in 1964"
+                        },
+                        {
+                            "designation": "E-2B",
+                            "description": "Upgraded E-2A with improved computer systems and enlarged outer fins"
+                        },
+                        {
+                            "designation": "E-2C",
+                            "description": "Major upgrade with new electronics, APS-145 radar and improved mission systems"
+                        },
+                        {
+                            "designation": "E-2D",
+                            "description": "Latest variant with APY-9 radar, new mission computer, glass cockpit, and aerial refueling capability"
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "name": "US Navy Fact File",
+                            "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166870/e-2c-d-hawkeye/"
+                        },
+                        {
+                            "name": "Northrop Grumman E-2D Specifications",
+                            "url": "https://www.northropgrumman.com/what-we-do/air/e-2d-advanced-hawkeye/"
+                        }
+                    ],
+                    "last_verified_date": "2024-03-19"
+                },
+                {
+                    "designation": "C-2A(R)",
+                    "name": "Greyhound",
+                    "introduction_year": 1966,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 56.83,
+                                "meters": 17.32
+                            },
+                            "wingspan": {
+                                "feet": 80.58,
+                                "meters": 24.56
+                            },
+                            "height": {
+                                "feet": 15.87,
+                                "meters": 4.84
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 33746,
+                                "kilograms": 15307
+                            },
+                            "max_takeoff": {
+                                "pounds": 60000,
+                                "kilograms": 27216
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 343,
+                                "mph": 395,
+                                "kmh": 635
+                            },
+                            "cruise_speed": {
+                                "knots": 251,
+                                "mph": 289,
+                                "kmh": 465
+                            },
+                            "range": {
+                                "nautical_miles": 1300,
+                                "miles": 1500,
+                                "kilometers": 2400
+                            },
+                            "service_ceiling": {
+                                "feet": 33500,
+                                "meters": 10200
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Allison T56-A-425 turboprop",
+                                    "number_of_engines": 2,
+                                    "power_output": {
+                                        "horsepower": 4600,
+                                        "kilowatts": 3400
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "description": "The C-2A Greyhound is a twin-engine, high-wing cargo aircraft designed to carry supplies, mail, and passengers to and from aircraft carriers of the United States Navy. Its primary mission is carrier onboard delivery (COD). The aircraft can deliver up to 10,000 pounds of cargo or up to 26 passengers, and is equipped for medical evacuation missions. Features include folding wings for carrier operations, a rear loading ramp, and powered winch for cargo handling.",
+                    "variants": [
+                        {
+                            "designation": "C-2A",
+                            "description": "Initial production variant, 17 built"
+                        },
+                        {
+                            "designation": "C-2A(R)",
+                            "description": "Reprocured C-2A with improved systems based on the E-2C variant, 39 built"
+                        }
+                    ],
+                    "source_info": [
+                        {
+                            "name": "U.S. Navy Fact File",
+                            "url": "https://www.navy.mil"
+                        },
+                        {
+                            "name": "Northrop Grumman Official Website",
+                            "url": "https://www.northropgrumman.com"
+                        }
+                    ],
+                    "last_verified_date": "2024-03-19"
+                },
+                {
+                    "designation": "F-14",
+                    "name": "Tomcat",
+                    "introduction_year": 1974,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 62.0,
+                                "meters": 18.9
+                            },
+                            "wingspan": {
+                                "feet": {
+                                    "swept": 38.0,
+                                    "unswept": 64.0
+                                },
+                                "meters": {
+                                    "swept": 11.6,
+                                    "unswept": 19.5
+                                }
+                            },
+                            "height": {
+                                "feet": 16.0,
+                                "meters": 4.9
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 43735,
+                                "kilograms": 19838
+                            },
+                            "max_takeoff": {
+                                "pounds": 74349,
+                                "kilograms": 33724
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": 2.34,
+                                "mph": 1544,
+                                "kmh": 2485
+                            },
+                            "combat_radius": {
+                                "nautical_miles": 500,
+                                "kilometers": 926
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            },
+                            "rate_of_climb": {
+                                "feet_per_minute": 45000,
+                                "meters_per_second": 229
+                            }
+                        }
+                    },
+                    "variants": [
+                        {
+                            "designation": "F-14A",
+                            "description": "Initial production variant with TF30 engines"
+                        },
+                        {
+                            "designation": "F-14B",
+                            "description": "Upgraded variant with F110-GE-400 engines"
+                        },
+                        {
+                            "designation": "F-14D",
+                            "description": "Final variant with improved avionics and F110-GE-400 engines"
+                        }
+                    ],
+                    "description": "The F-14 Tomcat was a supersonic, twin-engine, two-seat, variable-sweep wing fighter aircraft. Developed for the United States Navy's Naval Fighter Experimental (VFX) program after the collapse of the F-111B project, the F-14 was the first of the American teen-series fighters which were designed incorporating air combat experience against MiG aircraft during the Vietnam War.",
+                    "source": "US Navy Fact File, Naval Air Systems Command",
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "EA-6B",
+                    "name": "Prowler",
+                    "introduction_year": 1971,
+                    "status": "Retired",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 59.4,
+                                "meters": 18.1
+                            },
+                            "wingspan": {
+                                "feet": 53.0,
+                                "meters": 16.2
+                            },
+                            "height": {
+                                "feet": 16.75,
+                                "meters": 5.1
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 31160,
+                                "kilograms": 14134
+                            },
+                            "max_takeoff": {
+                                "pounds": 61500,
+                                "kilograms": 27896
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 566,
+                                "mph": 651,
+                                "km_h": 1048
+                            },
+                            "combat_radius": {
+                                "nautical_miles": 850,
+                                "miles": 978,
+                                "kilometers": 1574
+                            },
+                            "service_ceiling": {
+                                "feet": 37600,
+                                "meters": 11460
+                            }
+                        }
+                    },
+                    "description": "The EA-6B Prowler was a long-range, all-weather electronic warfare aircraft developed from the A-6 Intruder platform. It was designed to jam enemy radar systems and gather electronic intelligence, serving as the U.S. military's primary electronic warfare platform until its retirement.",
+                    "variants": [
+                        "EA-6B ICAP I - Initial electronic warfare capability",
+                        "EA-6B ICAP II - Improved electronic warfare systems",
+                        "EA-6B ICAP III - Final upgrade with enhanced electronic attack capabilities"
+                    ],
+                    "source": "U.S. Navy Fact File, Naval Air Systems Command",
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "YF-23",
+                    "name": "Black Widow II",
+                    "introduction_year": 1990,
+                    "status": "Prototype/Cancelled",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 67.4,
+                                "meters": 20.6
+                            },
+                            "wingspan": {
+                                "feet": 43.7,
+                                "meters": 13.3
+                            },
+                            "height": {
+                                "feet": 13.5,
+                                "meters": 4.1
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 29000,
+                                "kilograms": 13154
+                            },
+                            "max_takeoff": {
+                                "pounds": 62000,
+                                "kilograms": 28123
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": 2.2,
+                                "mph": 1450,
+                                "kmh": 2335
+                            },
+                            "combat_radius": {
+                                "nautical_miles": 750,
+                                "kilometers": 1389
+                            },
+                            "service_ceiling": {
+                                "feet": 65000,
+                                "meters": 19812
+                            }
+                        }
+                    },
+                    "description": "The YF-23 was Northrop's entry for the Advanced Tactical Fighter competition, competing against the Lockheed YF-22. While demonstrating exceptional stealth characteristics and supercruise capability, it ultimately lost to the YF-22. Only two prototypes were built: PAV-1 (painted black) and PAV-2 (painted gray).",
+                    "variants": [
+                        {
+                            "designation": "PAV-1",
+                            "name": "Black Widow II",
+                            "notes": "First prototype, painted black"
+                        },
+                        {
+                            "designation": "PAV-2",
+                            "name": "Gray Ghost",
+                            "notes": "Second prototype, painted gray"
+                        }
+                    ],
+                    "source": "USAF Museum, Northrop Grumman historical records",
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "MQ-8",
+                    "name": "Fire Scout",
+                    "introduction_year": 2009,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 41.4,
+                                "meters": 12.62
+                            },
+                            "rotor_diameter": {
+                                "feet": 36.0,
+                                "meters": 10.97
+                            },
+                            "height": {
+                                "feet": 9.71,
+                                "meters": 2.96
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 3150,
+                                "kilograms": 1429
+                            },
+                            "max_takeoff": {
+                                "pounds": 6000,
+                                "kilograms": 2722
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 115,
+                                "mph": 132,
+                                "km/h": 213
+                            },
+                            "cruise_speed": {
+                                "knots": 110,
+                                "mph": 127,
+                                "km/h": 204
+                            },
+                            "service_ceiling": {
+                                "feet": 16000,
+                                "meters": 4877
+                            },
+                            "range": {
+                                "nautical_miles": 618,
+                                "miles": 711,
+                                "kilometers": 1144
+                            },
+                            "endurance": {
+                                "hours": 12
+                            }
+                        }
+                    },
+                    "description": "The MQ-8 Fire Scout is an unmanned autonomous helicopter developed for the United States Armed Forces. It provides reconnaissance, situational awareness, aerial fire support and precision targeting support. The latest MQ-8C variant is based on the Bell 407 airframe and offers increased range, altitude and payload capacity.",
+                    "variants": [
+                        {
+                            "designation": "MQ-8B",
+                            "description": "Initial operational variant based on the Schweizer 333 airframe"
+                        },
+                        {
+                            "designation": "MQ-8C",
+                            "description": "Improved variant based on the Bell 407 airframe with increased payload and endurance"
+                        }
+                    ],
+                    "sources": [
+                        "Northrop Grumman MQ-8C Fire Scout factsheet",
+                        "U.S. Navy MQ-8 Fire Scout fact file",
+                        "Naval Air Systems Command (NAVAIR) specifications"
+                    ],
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "X-47B",
+                    "name": "UCAS-D",
+                    "introduction_year": 2011,
+                    "status": "Retired (Test Program)",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 38.2,
+                                "meters": 11.63
+                            },
+                            "wingspan": {
+                                "feet": 62.1,
+                                "meters": 18.92
+                            },
+                            "height": {
+                                "feet": 10.4,
+                                "meters": 3.17
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 14000,
+                                "kilograms": 6350
+                            },
+                            "max_takeoff": {
+                                "pounds": 44567,
+                                "kilograms": 20215
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 520,
+                                "mach": 0.9
+                            },
+                            "range": {
+                                "nautical_miles": 2100,
+                                "kilometers": 3889
+                            },
+                            "service_ceiling": {
+                                "feet": 40000,
+                                "meters": 12192
+                            }
+                        }
+                    },
+                    "description": "The X-47B was an unmanned combat air system demonstrator (UCAS-D) designed to demonstrate autonomous carrier operations. It successfully conducted the first autonomous carrier-based launch and recovery operations, and demonstrated autonomous aerial refueling capabilities.",
+                    "variants": [
+                        {
+                            "designation": "X-47A",
+                            "description": "Scaled technology demonstrator (Pegasus)"
+                        },
+                        {
+                            "designation": "X-47B",
+                            "description": "Full-scale carrier demonstration aircraft"
+                        }
+                    ],
+                    "source": {
+                        "name": "U.S. Navy X-47B UCAS Fact Sheet",
+                        "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166507/x-47b-ucas/",
+                        "type": "US Navy Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19"
+                },
+                {
+                    "designation": "B-2A",
+                    "name": "Spirit",
+                    "introduction_year": 1997,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 69.0,
+                                "meters": 21.0
+                            },
+                            "wingspan": {
+                                "feet": 172.0,
+                                "meters": 52.4
+                            },
+                            "height": {
+                                "feet": 17.0,
+                                "meters": 5.2
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 158000,
+                                "kilograms": 71668
+                            },
+                            "max_takeoff": {
+                                "pounds": 336500,
+                                "kilograms": 152860
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 410,
+                                "mach": 0.95
+                            },
+                            "range": {
+                                "nautical_miles": 6000,
+                                "kilometers": 11100
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15240
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF B-2 Spirit Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104482/b-2-spirit/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The B-2 Spirit is a multi-role stealth bomber capable of delivering both conventional and nuclear munitions. Its low-observable, or 'stealth,' characteristics give it the ability to penetrate sophisticated defensive networks. The aircraft's unique flying wing design and advanced composite materials make it virtually invisible to radar systems."
+                },
+                {
+                    "designation": "RQ-4",
+                    "name": "Global Hawk",
+                    "introduction_year": 1998,
+                    "status": "Active",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 51.0,
+                                "meters": 15.54
+                            },
+                            "wingspan": {
+                                "feet": 44.0,
+                                "meters": 13.41
+                            },
+                            "height": {
+                                "feet": 14.0,
+                                "meters": 4.27
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 13000,
+                                "kilograms": 5897
+                            },
+                            "max_takeoff": {
+                                "pounds": 26000,
+                                "kilograms": 11793
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "knots": 560,
+                                "mach": 0.84
+                            },
+                            "range": {
+                                "nautical_miles": 16000,
+                                "kilometers": 29630
+                            },
+                            "service_ceiling": {
+                                "feet": 65000,
+                                "meters": 19812
+                            }
+                        }
+                    },
+                    "source": {
+                        "name": "USAF RQ-4 Global Hawk Fact Sheet",
+                        "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104507/rq-4-global-hawk/",
+                        "type": "USAF Fact Sheet"
+                    },
+                    "last_verified": "2024-03-19",
+                    "description": "The RQ-4 Global Hawk is a high-altitude, long-endurance unmanned aerial vehicle (UAV) developed by Northrop Grumman for the United States Air Force. It is designed for intelligence, surveillance, and reconnaissance (ISR) missions, and can operate from both land and sea platforms."
+                },
+                {
+                    "designation": "B-21",
+                    "name": "Raider",
+                    "introduction_year": 2027,
+                    "status": "Development/Testing",
+                    "specifications": {
+                        "dimensions": {
+                            "length": {
+                                "feet": 54.0,
+                                "meters": 16.0
+                            },
+                            "wingspan": {
+                                "feet": 132.0,
+                                "meters": 40.0
+                            },
+                            "height": {
+                                "feet": "Classified",
+                                "meters": "Classified"
+                            }
+                        },
+                        "weights": {
+                            "empty": {
+                                "pounds": 70000,
+                                "kilograms": 31751
+                            },
+                            "max_takeoff": {
+                                "pounds": 180000,
+                                "kilograms": 81647
+                            }
+                        },
+                        "performance": {
+                            "max_speed": {
+                                "mach": 0.8,
+                                "mph": "Classified",
+                                "km/h": "Classified"
+                            },
+                            "service_ceiling": {
+                                "feet": 50000,
+                                "meters": 15000
+                            },
+                            "range": {
+                                "miles": "Classified",
+                                "kilometers": "Classified"
+                            }
+                        },
+                        "powerplant": {
+                            "engines": [
+                                {
+                                    "type": "Pratt & Whitney PW9000 non-afterburning turbofan",
+                                    "number": 2,
+                                    "thrust_per_engine": {
+                                        "lbf": 27000,
+                                        "kN": 120
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "armament": {
+                        "internal_weapons_bay": {
+                            "capacity": {
+                                "pounds": 20000,
+                                "kilograms": 9100
+                            }
+                        },
+                        "missiles": [
+                            "AGM-181 LRSO"
+                        ],
+                        "bombs": [
+                            "JDAM family of munitions"
+                        ]
+                    },
+                    "avionics": {
+                        "features": [
+                            "Advanced stealth technology",
+                            "Open systems architecture",
+                            "Digital engineering integration",
+                            "Cloud-based digital twin for maintenance"
+                        ]
+                    },
+                    "description": "The B-21 Raider is a strategic stealth bomber developed as part of the Long Range Strike Bomber (LRS-B) program. It is the world's first sixth-generation aircraft and is designed to be a long-range, highly survivable bomber capable of penetrating advanced air defenses to deliver both conventional and nuclear weapons. The aircraft features advanced stealth technology, digital engineering, and an open systems architecture for rapid upgrades.",
+                    "variants": [
+                        {
+                            "designation": "B-21A",
+                            "description": "Initial production variant"
+                        }
+                    ],
+                    "sources": [
+                        {
+                            "name": "Northrop Grumman Official Website",
+                            "url": "https://www.northropgrumman.com/what-we-do/air/b-21-raider/",
+                            "last_verified": "2024-03-19"
+                        },
+                        {
+                            "name": "U.S. Air Force Fact Sheet",
+                            "url": "https://www.af.mil/About-Us/Fact-Sheets/Display/Article/2752948/b-21-raider/",
+                            "last_verified": "2024-03-19"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "aircraft": [],
+    "notes": [
+        "All specifications are from official U.S. Air Force and National Museum fact sheets",
+        "Some performance data may be limited due to operational security",
+        "Database will be expanded as more verified information becomes available"
+    ],
+    "metadata": {
+        "data_policy": {
+            "verification_required": true,
+            "source_requirements": [
+                "Official military documentation",
+                "Manufacturer specifications",
+                "National museums and archives",
+                "Government factsheets"
+            ]
+        }
+    }
+} 

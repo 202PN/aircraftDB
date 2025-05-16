@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["database_version", "last_updated", "manufacturers"],
+  "properties": {
+    "database_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "manufacturers": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Za-z\\s-]+$": {
+          "type": "object",
+          "required": ["aircraft"],
+          "properties": {
+            "aircraft": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "designation",
+                  "name",
+                  "specifications",
+                  "source",
+                  "last_verified"
+                ],
+                "properties": {
+                  "designation": {
+                    "type": "string",
+                    "pattern": "^[A-Z0-9-]+$"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "introduction_year": {
+                    "type": "integer",
+                    "minimum": 1903
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": ["Active", "Retired", "In Development"]
+                  },
+                  "specifications": {
+                    "type": "object",
+                    "required": ["dimensions", "weights", "performance"],
+                    "properties": {
+                      "dimensions": {
+                        "type": "object",
+                        "required": ["length", "wingspan", "height"],
+                        "properties": {
+                          "length": {
+                            "type": "object",
+                            "required": ["feet", "meters"],
+                            "properties": {
+                              "feet": {"type": "number"},
+                              "meters": {"type": "number"}
+                            }
+                          },
+                          "wingspan": {
+                            "type": "object",
+                            "required": ["feet", "meters"],
+                            "properties": {
+                              "feet": {"type": "number"},
+                              "meters": {"type": "number"}
+                            }
+                          },
+                          "height": {
+                            "type": "object",
+                            "required": ["feet", "meters"],
+                            "properties": {
+                              "feet": {"type": "number"},
+                              "meters": {"type": "number"}
+                            }
+                          }
+                        }
+                      },
+                      "weights": {
+                        "type": "object",
+                        "required": ["empty", "max_takeoff"],
+                        "properties": {
+                          "empty": {
+                            "type": "object",
+                            "required": ["pounds", "kilograms"],
+                            "properties": {
+                              "pounds": {"type": "number"},
+                              "kilograms": {"type": "number"}
+                            }
+                          },
+                          "max_takeoff": {
+                            "type": "object",
+                            "required": ["pounds", "kilograms"],
+                            "properties": {
+                              "pounds": {"type": "number"},
+                              "kilograms": {"type": "number"}
+                            }
+                          }
+                        }
+                      },
+                      "performance": {
+                        "type": "object",
+                        "required": ["max_speed", "range", "service_ceiling"],
+                        "properties": {
+                          "max_speed": {
+                            "type": "object",
+                            "required": ["knots", "mach"],
+                            "properties": {
+                              "knots": {"type": "number"},
+                              "mach": {"type": "number"}
+                            }
+                          },
+                          "range": {
+                            "type": "object",
+                            "required": ["nautical_miles", "kilometers"],
+                            "properties": {
+                              "nautical_miles": {"type": "number"},
+                              "kilometers": {"type": "number"}
+                            }
+                          },
+                          "service_ceiling": {
+                            "type": "object",
+                            "required": ["feet", "meters"],
+                            "properties": {
+                              "feet": {"type": "number"},
+                              "meters": {"type": "number"}
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "variants": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": ["designation", "name", "differences"],
+                      "properties": {
+                        "designation": {"type": "string"},
+                        "name": {"type": "string"},
+                        "differences": {
+                          "type": "object",
+                          "description": "Only includes specifications that differ from the base model"
+                        }
+                      }
+                    }
+                  },
+                  "source": {
+                    "type": "object",
+                    "required": ["name", "url", "type"],
+                    "properties": {
+                      "name": {"type": "string"},
+                      "url": {"type": "string", "format": "uri"},
+                      "type": {
+                        "type": "string",
+                        "enum": [
+                          "USAF Fact Sheet",
+                          "Manufacturer Specification",
+                          "Military Documentation",
+                          "National Museum"
+                        ]
+                      }
+                    }
+                  },
+                  "last_verified": {
+                    "type": "string",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} 
