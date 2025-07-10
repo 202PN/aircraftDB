@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{{ manufacturer }} - Aircraft Database{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="breadcrumb-item active">{{ manufacturer }}</li>
+    </ol>
+</nav>
+
+<div class="text-center mb-5">
+    <h1 class="page-title">
+        <i class="fas fa-industry"></i> {{ manufacturer }}
+    </h1>
+    <p class="page-subtitle">Aircraft fleet overview and specifications</p>
+</div>
+
+<!-- Summary Statistics -->
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number text-primary">{{ total }}</div>
+        <div class="stat-label">Total Aircraft</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number status-active">{{ active }}</div>
+        <div class="stat-label">Active</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number status-retired">{{ retired }}</div>
+        <div class="stat-label">Retired</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number status-development">{{ development }}</div>
+        <div class="stat-label">In Development</div>
+    </div>
+</div>
+
+<!-- Aircraft Grid -->
+<div class="aircraft-grid">
+    {% for aircraft in aircraft %}
+    <div class="aircraft-card">
+        <div class="aircraft-title">
+            <i class="fas fa-plane text-primary"></i>
+            {{ aircraft.designation }} {{ aircraft.name }}
+        </div>
+        <div class="aircraft-subtitle">
+            <i class="fas fa-calendar"></i> {{ aircraft.introduction_year }}
+            {% if aircraft.type %}
+            <br><i class="fas fa-tag"></i> {{ aircraft.type }}
+            {% endif %}
+        </div>
+        <div class="mb-3">
+            <span class="status-badge 
+                {% if aircraft.status == 'Active' %}status-active
+                {% elif aircraft.status == 'Retired' %}status-retired
+                {% else %}status-development{% endif %}">
+                {{ aircraft.status }}
+            </span>
+        </div>
+        {% if aircraft.description %}
+        <p class="text-muted mb-3" style="font-size: 0.875rem; line-height: 1.5;">
+            {{ aircraft.description[:150] }}{% if aircraft.description|length > 150 %}...{% endif %}
+        </p>
+        {% endif %}
+        <a href="{{ url_for('aircraft_detail', manufacturer_name=manufacturer, designation=aircraft.designation) }}" 
+           class="btn btn-primary">
+            <i class="fas fa-info-circle"></i> View Details
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 

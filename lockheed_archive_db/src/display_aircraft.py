@@ -8,6 +8,7 @@ from rich.layout import Layout
 from rich.tree import Tree
 from rich.progress import track
 from datetime import datetime
+import webbrowser
 
 def load_database(file_path: str) -> Dict:
     with open(file_path, 'r') as f:
@@ -214,6 +215,20 @@ def display_aircraft_details(console: Console, aircraft: Dict):
     console.print(panel)
     console.print()
 
+    # Display source URL and offer to open in browser (after showing details)
+    source = aircraft.get('source', {})
+    if source and isinstance(source, dict) and 'url' in source:
+        source_url = source.get('url')
+        console.print(f"[bold cyan]Source URL:[/bold cyan] {source_url}")
+        open_now = input("Open source page in default browser? (y/n): ")
+        if open_now.lower() == 'y':
+            try:
+                webbrowser.open(source_url)
+            except Exception as e:
+                console.print(f"[red]Could not open URL: {e}[/red]")
+    else:
+        console.print("[bold magenta]No source URL available for this aircraft.[/bold magenta]")
+
 def display_manufacturer_summary(console: Console, manufacturer: str, aircraft_list: List[Dict]):
     active = sum(1 for a in aircraft_list if a.get('status') == 'Active')
     retired = sum(1 for a in aircraft_list if a.get('status') == 'Retired')
@@ -282,10 +297,33 @@ def main():
                 ))
                 console.print()
                 
-                # Display detailed information for each aircraft
-                for aircraft in sorted_aircraft:
-                    display_aircraft_details(console, aircraft)
-                    console.print()
+                # Aircraft selection loop
+                while True:
+                    console.print("[bold yellow]Select an aircraft to view details:[/bold yellow]")
+                    for aidx, aircraft in enumerate(sorted_aircraft, 1):
+                        designation = aircraft.get('designation', 'N/A')
+                        name = aircraft.get('name', '')
+                        console.print(f"{aidx}. {designation} {name}")
+                    console.print("B. Back to manufacturer selection")
+                    console.print("Q. Quit")
+                    achoice = input(f"\nEnter your choice (1-{len(sorted_aircraft)}, B, or Q): ")
+                    if achoice.upper() == 'B':
+                        console.clear()
+                        break
+                    elif achoice.upper() == 'Q':
+                        console.clear()
+                        return
+                    try:
+                        aidx = int(achoice) - 1
+                        if 0 <= aidx < len(sorted_aircraft):
+                            console.clear()
+                            display_aircraft_details(console, sorted_aircraft[aidx])
+                            input("\nPress Enter to return to aircraft list...")
+                            console.clear()
+                        else:
+                            console.print("[red]Invalid choice. Please try again.[/red]")
+                    except ValueError:
+                        console.print("[red]Invalid input. Please enter a number, B, or Q.[/red]")
                 
                 input("\nPress Enter to return to manufacturer selection...")
             else:

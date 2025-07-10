@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Aircraft Database - Home{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="page-title">
+        <i class="fas fa-plane"></i> Aircraft Database
+    </h1>
+    <p class="page-subtitle">Comprehensive information about military and civilian aircraft</p>
+</div>
+
+<div class="row mb-5">
+    <div class="col-md-6 offset-md-3">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-info-circle"></i> Database Information</h5>
+            </div>
+            <div class="card-body text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="stat-number text-primary">{{ db_version }}</div>
+                        <div class="stat-label">Version</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="stat-number text-primary">{{ last_updated }}</div>
+                        <div class="stat-label">Last Updated</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-center mb-4" style="color: white; font-weight: 600;">Select a Manufacturer</h2>
+    </div>
+</div>
+
+<div class="manufacturer-grid">
+    {% for manufacturer in manufacturers %}
+    <div class="manufacturer-card">
+        <div class="manufacturer-icon">
+            <i class="fas fa-industry"></i>
+        </div>
+        <div class="manufacturer-title">{{ manufacturer }}</div>
+        <div class="manufacturer-description">
+            Browse aircraft from {{ manufacturer }}
+        </div>
+        <a href="{{ url_for('manufacturer', manufacturer_name=manufacturer) }}" 
+           class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View Aircraft
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 

@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+
+{% block title %}{{ aircraft.designation }} {{ aircraft.name }} - Aircraft Database{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ url_for('manufacturer', manufacturer_name=manufacturer) }}">{{ manufacturer }}</a></li>
+        <li class="breadcrumb-item active">{{ aircraft.designation }} {{ aircraft.name }}</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2 class="mb-0">
+                    <i class="fas fa-plane"></i> {{ aircraft.designation }} {{ aircraft.name }}
+                </h2>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <strong>Status:</strong>
+                        <span class="status-badge 
+                            {% if aircraft.status == 'Active' %}status-active
+                            {% elif aircraft.status == 'Retired' %}status-retired
+                            {% else %}status-development{% endif %}">
+                            {{ aircraft.status }}
+                        </span>
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Introduction Year:</strong> {{ aircraft.introduction_year }}
+                    </div>
+                    {% if aircraft.type %}
+                    <div class="col-md-4">
+                        <strong>Type:</strong> {{ aircraft.type }}
+                    </div>
+                    {% endif %}
+                </div>
+                
+                {% if aircraft.description %}
+                <div class="mb-4">
+                    <h5><i class="fas fa-info-circle"></i> Description</h5>
+                    <p class="text-muted">{{ aircraft.description }}</p>
+                </div>
+                {% endif %}
+                
+                {% if aircraft.source and aircraft.source.url %}
+                <div class="mb-4">
+                    <h5><i class="fas fa-external-link-alt"></i> Source Information</h5>
+                    <p><strong>{{ aircraft.source.name }}</strong></p>
+                    <p class="text-muted">{{ aircraft.source.type }}</p>
+                    <a href="{{ aircraft.source.url }}" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-external-link-alt"></i> View Source
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-chart-bar"></i> Quick Stats</h5>
+            </div>
+            <div class="card-body">
+                {% if aircraft.specifications %}
+                {% if aircraft.specifications.dimensions %}
+                <div class="mb-3">
+                    <strong>Length:</strong><br>
+                    <span class="text-muted">
+                        {{ aircraft.specifications.dimensions.length.feet }} ft 
+                        ({{ aircraft.specifications.dimensions.length.meters }} m)
+                    </span>
+                </div>
+                {% endif %}
+                
+                {% if aircraft.specifications.performance and aircraft.specifications.performance.max_speed %}
+                <div class="mb-3">
+                    <strong>Max Speed:</strong><br>
+                    <span class="text-muted">
+                        {% if aircraft.specifications.performance.max_speed.mach %}
+                            Mach {{ aircraft.specifications.performance.max_speed.mach }}
+                        {% endif %}
+                        {% if aircraft.specifications.performance.max_speed.knots %}
+                            {{ aircraft.specifications.performance.max_speed.knots }} knots
+                        {% endif %}
+                    </span>
+                </div>
+                {% endif %}
+                
+                {% if aircraft.specifications.performance and aircraft.specifications.performance.range %}
+                <div class="mb-3">
+                    <strong>Range:</strong><br>
+                    <span class="text-muted">
+                        {% if aircraft.specifications.performance.range.nautical_miles %}
+                            {{ aircraft.specifications.performance.range.nautical_miles }} nm
+                        {% endif %}
+                        {% if aircraft.specifications.performance.range.kilometers %}
+                            ({{ aircraft.specifications.performance.range.kilometers }} km)
+                        {% endif %}
+                    </span>
+                </div>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if aircraft.specifications %}
+<div class="row">
+    <div class="col-12">
+        <h3 class="mb-4" style="color: white;">Specifications</h3>
+    </div>
+</div>
+
+<!-- Dimensions -->
+{% if aircraft.specifications.dimensions %}
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-ruler"></i> Dimensions</h5>
+            </div>
+            <div class="card-body">
+                <table class="table specs-table">
+                    <tbody>
+                        {% if aircraft.specifications.dimensions.length %}
+                        <tr>
+                            <td><strong>Length:</strong></td>
+                            <td>{{ aircraft.specifications.dimensions.length.feet }} ft ({{ aircraft.specifications.dimensions.length.meters }} m)</td>
+                        </tr>
+                        {% endif %}
+                        {% if aircraft.specifications.dimensions.wingspan %}
+                        <tr>
+                            <td><strong>Wingspan:</strong></td>
+                            <td>{{ aircraft.specifications.dimensions.wingspan.feet }} ft ({{ aircraft.specifications.dimensions.wingspan.meters }} m)</td>
+                        </tr>
+                        {% endif %}
+                        {% if aircraft.specifications.dimensions.height %}
+                        <tr>
+                            <td><strong>Height:</strong></td>
+                            <td>{{ aircraft.specifications.dimensions.height.feet }} ft ({{ aircraft.specifications.dimensions.height.meters }} m)</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Weights -->
+    {% if aircraft.specifications.weights %}
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-weight-hanging"></i> Weights</h5>
+            </div>
+            <div class="card-body">
+                <table class="table specs-table">
+                    <tbody>
+                        {% if aircraft.specifications.weights.empty %}
+                        <tr>
+                            <td><strong>Empty Weight:</strong></td>
+                            <td>{{ aircraft.specifications.weights.empty.pounds }} lbs ({{ aircraft.specifications.weights.empty.kilograms }} kg)</td>
+                        </tr>
+                        {% endif %}
+                        {% if aircraft.specifications.weights.max_takeoff or aircraft.specifications.weights.maximum_takeoff %}
+                        <tr>
+                            <td><strong>Max Takeoff:</strong></td>
+                            <td>
+                                {% if aircraft.specifications.weights.max_takeoff %}
+                                    {{ aircraft.specifications.weights.max_takeoff.pounds }} lbs ({{ aircraft.specifications.weights.max_takeoff.kilograms }} kg)
+                                {% else %}
+                                    {{ aircraft.specifications.weights.maximum_takeoff.pounds }} lbs ({{ aircraft.specifications.weights.maximum_takeoff.kilograms }} kg)
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- Performance -->
+{% if aircraft.specifications.performance %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-tachometer-alt"></i> Performance</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% if aircraft.specifications.performance.max_speed %}
+                    <div class="col-md-3">
+                        <strong>Max Speed:</strong><br>
+                        {% if aircraft.specifications.performance.max_speed.mach %}
+                            <span class="text-muted">Mach {{ aircraft.specifications.performance.max_speed.mach }}</span>
+                        {% endif %}
+                        {% if aircraft.specifications.performance.max_speed.knots %}
+                            <span class="text-muted">{{ aircraft.specifications.performance.max_speed.knots }} knots</span>
+                        {% endif %}
+                        {% if aircraft.specifications.performance.max_speed.kmh %}
+                            <span class="text-muted">{{ aircraft.specifications.performance.max_speed.kmh }} km/h</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    
+                    {% if aircraft.specifications.performance.range %}
+                    <div class="col-md-3">
+                        <strong>Range:</strong><br>
+                        {% if aircraft.specifications.performance.range.nautical_miles %}
+                            <span class="text-muted">{{ aircraft.specifications.performance.range.nautical_miles }} nm</span>
+                        {% endif %}
+                        {% if aircraft.specifications.performance.range.kilometers %}
+                            <span class="text-muted">({{ aircraft.specifications.performance.range.kilometers }} km)</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                    
+                    {% if aircraft.specifications.performance.service_ceiling %}
+                    <div class="col-md-3">
+                        <strong>Service Ceiling:</strong><br>
+                        {% if aircraft.specifications.performance.service_ceiling.feet %}
+                            <span class="text-muted">{{ aircraft.specifications.performance.service_ceiling.feet }} ft</span>
+                        {% endif %}
+                        {% if aircraft.specifications.performance.service_ceiling.meters %}
+                            <span class="text-muted">({{ aircraft.specifications.performance.service_ceiling.meters }} m)</span>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Variants -->
+{% if aircraft.variants %}
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="fas fa-layer-group"></i> Variants</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    {% for variant in aircraft.variants %}
+                    <div class="col-md-6 mb-3">
+                        <div class="aircraft-card">
+                            <div class="aircraft-title">{{ variant.designation }}</div>
+                            {% if variant.name %}
+                            <div class="aircraft-subtitle">{{ variant.name }}</div>
+                            {% endif %}
+                            {% if variant.description %}
+                            <p class="text-muted">{{ variant.description }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endif %}
+{% endblock %} 
