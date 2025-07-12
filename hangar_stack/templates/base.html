@@ -13,13 +13,13 @@
         }
         
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
             min-height: 100vh;
-            color: #2d3748;
+            color: #1e293b;
         }
         
         .navbar {
-            background: rgba(255, 255, 255, 0.95) !important;
+            background: rgba(255, 255, 255, 0.1) !important;
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -27,18 +27,18 @@
         
         .navbar-brand {
             font-weight: 700;
-            color: #4a5568 !important;
+            color: white !important;
             font-size: 1.5rem;
         }
         
         .nav-link {
             font-weight: 500;
-            color: #4a5568 !important;
+            color: rgba(255, 255, 255, 0.9) !important;
             transition: color 0.3s ease;
         }
         
         .nav-link:hover {
-            color: #667eea !important;
+            color: #bfdbfe !important;
         }
         
         .main-container {
@@ -46,9 +46,9 @@
         }
         
         .card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
-            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
@@ -61,7 +61,7 @@
         }
         
         .card-header {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             border: none;
             padding: 1.5rem;
@@ -75,7 +75,7 @@
         }
         
         .aircraft-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 1.5rem;
@@ -92,12 +92,12 @@
         .aircraft-title {
             font-size: 1.25rem;
             font-weight: 600;
-            color: #2d3748;
+            color: white;
             margin-bottom: 0.5rem;
         }
         
         .aircraft-subtitle {
-            color: #718096;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
@@ -113,22 +113,22 @@
         }
         
         .status-active {
-            background: linear-gradient(135deg, #48bb78, #38a169);
+            background: linear-gradient(135deg, #059669, #10b981);
             color: white;
         }
         
         .status-retired {
-            background: linear-gradient(135deg, #f56565, #e53e3e);
+            background: linear-gradient(135deg, #dc2626, #ef4444);
             color: white;
         }
         
         .status-development {
-            background: linear-gradient(135deg, #ed8936, #dd6b20);
+            background: linear-gradient(135deg, #d97706, #f59e0b);
             color: white;
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             border: none;
             border-radius: 12px;
             padding: 0.75rem 1.5rem;
@@ -137,9 +137,9 @@
         }
         
         .btn-primary:hover {
-            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
         }
         
         .stats-grid {
@@ -150,21 +150,24 @@
         }
         
         .stat-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
             border-radius: 12px;
             padding: 1.5rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            color: white;
         }
         
         .stat-label {
-            color: #718096;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.875rem;
             font-weight: 500;
         }
@@ -184,39 +187,43 @@
         }
         
         .breadcrumb {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(20px);
             border-radius: 12px;
             padding: 0.75rem 1.5rem;
             margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .breadcrumb-item a {
-            color: #667eea;
+            color: #bfdbfe;
             text-decoration: none;
             font-weight: 500;
         }
         
         .breadcrumb-item.active {
-            color: #718096;
+            color: rgba(255, 255, 255, 0.8);
         }
         
         .specs-table {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
             border-radius: 12px;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .specs-table th {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
             color: white;
             font-weight: 600;
             border: none;
         }
         
         .specs-table td {
-            border-color: rgba(0, 0, 0, 0.1);
+            border-color: rgba(255, 255, 255, 0.1);
             padding: 1rem;
+            color: white;
         }
         
         .manufacturer-grid {
@@ -227,12 +234,14 @@
         }
         
         .manufacturer-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
             border-radius: 16px;
             padding: 2rem;
             text-align: center;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .manufacturer-card:hover {
@@ -242,20 +251,28 @@
         
         .manufacturer-icon {
             font-size: 3rem;
-            color: #667eea;
+            color: #bfdbfe;
             margin-bottom: 1rem;
         }
         
         .manufacturer-title {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #2d3748;
+            color: white;
             margin-bottom: 1rem;
         }
         
         .manufacturer-description {
-            color: #718096;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 1.5rem;
+        }
+        
+        .text-primary {
+            color: #bfdbfe !important;
+        }
+        
+        .card-body {
+            color: white;
         }
     </style>
 </head>
