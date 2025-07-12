@@ -1,29 +1,29 @@
 {% extends "base.html" %}
 
-{% block title %}Aircraft Database - Home{% endblock %}
+{% block title %}HangarStack - Home{% endblock %}
 
 {% block content %}
 <div class="text-center mb-5">
     <h1 class="page-title">
-        <i class="fas fa-plane"></i> Aircraft Database
+        <i class="fas fa-plane"></i> HangarStack
     </h1>
-    <p class="page-subtitle">Comprehensive information about military and civilian aircraft</p>
+    <p class="page-subtitle">Comprehensive information about military and civilian aircrafts</p>
 </div>
 
 <div class="row mb-5">
-    <div class="col-md-4 offset-md-4">
-        <div class="card">
+    <div class="col-md-8 offset-md-2">
+        <div class="card db-info-card">
             <div class="card-header">
                 <h6 class="mb-0"><i class="fas fa-info-circle"></i> Database Info</h6>
             </div>
             <div class="card-body text-center">
                 <div class="row">
-                    <div class="col-6">
-                        <div class="stat-number text-primary" style="font-size: 1.5rem;">{{ db_version }}</div>
+                    <div class="col-md-6">
+                        <div class="stat-number">{{ db_version }}</div>
                         <div class="stat-label">Version</div>
                     </div>
-                    <div class="col-6">
-                        <div class="stat-number text-primary" style="font-size: 1.5rem;">{{ last_updated }}</div>
+                    <div class="col-md-6">
+                        <div class="stat-number">{{ last_updated }}</div>
                         <div class="stat-label">Updated</div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
 
 <div class="row">
     <div class="col-12">
-        <h2 class="text-center mb-4" style="color: white; font-weight: 600;">Select a Manufacturer</h2>
+        <h2 class="text-center mb-4" style="color: #00d4ff; font-weight: 600; font-family: 'Orbitron', monospace; text-transform: uppercase; letter-spacing: 2px;">Select a Manufacturer</h2>
     </div>
 </div>
 

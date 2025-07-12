@@ -1,0 +1,602 @@
+/* HangarStack - Tony Stark Holographic Interface */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background: radial-gradient(ellipse at center, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+    color: #00d4ff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Make all paragraph text white */
+p {
+    color: white !important;
+}
+
+/* Make all text elements white by default */
+.text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Holographic Background Effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+    animation: hologramPulse 8s ease-in-out infinite;
+}
+
+@keyframes hologramPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Navigation - Holographic */
+.navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid #00d4ff;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    position: relative;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', monospace;
+    font-weight: 900;
+    color: #00d4ff !important;
+    font-size: 1.8rem;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    position: relative;
+}
+
+.navbar-brand::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, transparent);
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #00d4ff !important;
+    transition: all 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+/* Layout */
+.main-container {
+    padding: 2rem 0;
+    position: relative;
+}
+
+/* Holographic Cards */
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    border: 2px solid #00d4ff;
+    border-radius: 20px;
+    box-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.3),
+        inset 0 0 30px rgba(0, 212, 255, 0.1);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: cardScan 4s linear infinite;
+}
+
+@keyframes cardScan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 0 50px rgba(0, 212, 255, 0.5),
+        inset 0 0 50px rgba(0, 212, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #001122, #003366);
+    color: #00d4ff;
+    border: none;
+    padding: 1.5rem;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.card-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+}
+
+.card-body {
+    color: #00d4ff;
+    padding: 2rem;
+}
+
+/* Database Info Card - Holographic Terminal */
+.db-info-card {
+    background: rgba(0, 0, 0, 0.9) !important;
+    border: 2px solid #00d4ff !important;
+    font-family: 'Orbitron', monospace !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 
+        0 0 40px rgba(0, 212, 255, 0.4),
+        inset 0 0 40px rgba(0, 212, 255, 0.1) !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+.db-info-card .card-header {
+    background: linear-gradient(135deg, #001122, #003366) !important;
+    color: #00d4ff !important;
+    border-bottom: 2px solid #00d4ff !important;
+    padding: 1rem 2rem !important;
+}
+
+.db-info-card .card-header i {
+    color: #00d4ff !important;
+    animation: terminalBlink 1.5s ease-in-out infinite;
+}
+
+@keyframes terminalBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.db-info-card .card-body {
+    padding: 1.5rem 2rem !important;
+}
+
+.db-info-card .stat-number {
+    font-size: 1.8rem !important;
+    color: #00d4ff !important;
+    font-weight: 900 !important;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8) !important;
+    font-family: 'Orbitron', monospace !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.db-info-card .stat-label {
+    font-size: 0.8rem !important;
+    color: #00d4ff !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Aircraft Grid - Holographic Display */
+.aircraft-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.aircraft-card {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 
+        0 0 40px rgba(0, 212, 255, 0.3),
+        inset 0 0 40px rgba(0, 212, 255, 0.1);
+    transition: all 0.5s ease;
+    border: 2px solid #00d4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.aircraft-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: cardScan 3s linear infinite;
+}
+
+.aircraft-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.aircraft-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 
+        0 0 60px rgba(0, 212, 255, 0.6),
+        inset 0 0 60px rgba(0, 212, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.aircraft-card:hover::after {
+    opacity: 1;
+}
+
+.aircraft-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.aircraft-subtitle {
+    color: rgba(0, 212, 255, 0.8);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Aircraft Image Container */
+.aircraft-image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #001122, #003366);
+    border: 2px solid #00d4ff;
+}
+
+.aircraft-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.aircraft-card:hover .aircraft-image {
+    transform: scale(1.1);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* Status Badges - Holographic */
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', monospace;
+    border: 2px solid;
+    position: relative;
+    overflow: hidden;
+}
+
+.status-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.status-badge:hover::before {
+    left: 100%;
+}
+
+.status-active {
+    background: linear-gradient(135deg, #004400, #006600);
+    color: #00ff00;
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.status-retired {
+    background: linear-gradient(135deg, #440000, #660000);
+    color: #ff4444;
+    border-color: #ff4444;
+    box-shadow: 0 0 20px rgba(255, 68, 68, 0.5);
+}
+
+.status-development {
+    background: linear-gradient(135deg, #442200, #664400);
+    color: #ffaa00;
+    border-color: #ffaa00;
+    box-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+}
+
+/* Buttons - Holographic */
+.btn-primary {
+    background: linear-gradient(135deg, #001122, #003366);
+    border: 2px solid #00d4ff;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    transition: all 0.4s ease;
+    font-family: 'Orbitron', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00d4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #003366, #004488);
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+    color: #ffffff;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Typography - Holographic */
+.page-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.page-subtitle {
+    color: rgba(0, 212, 255, 0.8);
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Manufacturer Grid - Holographic */
+.manufacturer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.manufacturer-card {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 
+        0 0 40px rgba(0, 212, 255, 0.3),
+        inset 0 0 40px rgba(0, 212, 255, 0.1);
+    transition: all 0.5s ease;
+    border: 2px solid #00d4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.manufacturer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+    animation: cardScan 4s linear infinite;
+}
+
+.manufacturer-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 
+        0 0 60px rgba(0, 212, 255, 0.6),
+        inset 0 0 60px rgba(0, 212, 255, 0.2);
+    border-color: #ffffff;
+}
+
+.manufacturer-icon {
+    font-size: 4rem;
+    color: #00d4ff;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.manufacturer-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #00d4ff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+}
+
+.manufacturer-description {
+    color: rgba(0, 212, 255, 0.8);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Utility Classes */
+.text-primary {
+    color: #00d4ff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .manufacturer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .aircraft-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .aircraft-card {
+        padding: 1.5rem;
+    }
+    
+    .manufacturer-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    
+    .main-container {
+        padding: 1rem 0;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0, 212, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #00d4ff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+} 
