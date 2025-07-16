@@ -19,13 +19,44 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            /* Add this line for a background image: */
+            background: url('{{ url_for('static', filename='images/hangarbg.png') }}') center center / cover no-repeat fixed;
+            position: relative;
+        }
+        .welcome-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 20, 40, 0.65); /* Optional: dark overlay for readability */
+            z-index: 0;
+        }
+        .welcome-logo, .welcome-title, .enter-btn {
+            position: relative;
+            z-index: 1;
         }
         .welcome-logo {
-            height: 300px;
+            height: 500px;
             max-width: 90vw;
-            margin-bottom: 2.5rem;
             filter: drop-shadow(0 0 60px #00d4ff88);
             animation: floatImage 3s ease-in-out infinite;
+            transition: transform 1.2s cubic-bezier(.4,2,.3,1), opacity 1.2s cubic-bezier(.4,2,.3,1);
+        }
+        @keyframes flyAway {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1) rotate(0deg);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-100px) scale(1.1) rotate(-10deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-1000px) scale(0.5) rotate(-30deg);
+            }
+        }
+        .welcome-logo.fly-away {
+            animation: flyAway 1.2s cubic-bezier(.4,2,.3,1) forwards;
         }
         .welcome-title {
             font-family: 'Orbitron', monospace;
@@ -63,5 +94,15 @@
         <div class="welcome-title">Welcome to HangarStack</div>
         <a href="{{ url_for('home') }}" class="enter-btn">Enter</a>
     </div>
+    <script>
+    document.querySelector('.enter-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const logo = document.querySelector('.welcome-logo');
+        logo.classList.add('fly-away');
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 1100); // match animation duration
+    });
+    </script>
 </body>
 </html> 
