@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | HangarStack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .welcome-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .welcome-logo {
+            height: 300px;
+            max-width: 90vw;
+            margin-bottom: 2.5rem;
+            filter: drop-shadow(0 0 60px #00d4ff88);
+            animation: floatImage 3s ease-in-out infinite;
+        }
+        .welcome-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px #00d4ff88;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .enter-btn {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            padding: 1rem 3rem;
+            border-radius: 2rem;
+            background: linear-gradient(135deg, #001122, #003366);
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+            box-shadow: 0 0 30px #00d4ff44;
+            transition: all 0.3s cubic-bezier(.4,2,.3,1);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .enter-btn:hover, .enter-btn:focus {
+            background: linear-gradient(135deg, #003366, #004488);
+            color: #fff;
+            box-shadow: 0 0 60px #00d4ff99;
+            transform: translateY(-4px) scale(1.04);
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HangarStack Logo" class="welcome-logo">
+        <div class="welcome-title">Welcome to HangarStack</div>
+        <a href="{{ url_for('home') }}" class="enter-btn">Enter</a>
+    </div>
+</body>
+</html> 

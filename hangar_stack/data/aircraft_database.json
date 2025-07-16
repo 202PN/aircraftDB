@@ -9,6 +9,7 @@
                     "name": "Lightning",
                     "introduction_year": 1941,
                     "status": "Retired",
+                    "image": "p38.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -62,6 +63,7 @@
                     "name": "Neptune",
                     "introduction_year": 1947,
                     "status": "Retired",
+                    "image": "p2.png",
                     "type": "Maritime Patrol and Anti-Submarine Warfare Aircraft",
                     "source": {
                         "name": "US Navy Historical Records",
@@ -125,6 +127,7 @@
                     "name": "Dragon Lady",
                     "introduction_year": 1955,
                     "status": "Active",
+                    "image": "u2s.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -178,6 +181,7 @@
                     "name": "Starfighter",
                     "introduction_year": 1958,
                     "status": "Retired",
+                    "image": "f104.png",
                     "type": "Interceptor/Fighter Aircraft",
                     "source": {
                         "name": "National Museum of the USAF F-104 Fact Sheet",
@@ -248,6 +252,7 @@
                     "name": "Orion",
                     "introduction_year": 1962,
                     "status": "Active",
+                    "image": "p3.png",
                     "type": "Maritime Patrol and Anti-Submarine Warfare Aircraft",
                     "variants": [
                         {
@@ -318,6 +323,7 @@
                     "name": "Blackbird",
                     "introduction_year": 1966,
                     "status": "Retired",
+                    "image": "sr71.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -403,6 +409,7 @@
                     "name": "Super Galaxy",
                     "introduction_year": 1970,
                     "status": "Active",
+                    "image": "c5.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -456,6 +463,7 @@
                     "name": "TriStar",
                     "introduction_year": 1972,
                     "status": "Retired",
+                    "image": "l1011.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -554,6 +562,7 @@
                     "name": "Nighthawk",
                     "introduction_year": 1983,
                     "status": "Retired",
+                    "image": "f117.png",
                     "type": "Stealth Attack Aircraft",
                     "source": {
                         "name": "National Museum of the USAF F-117 Fact Sheet",
@@ -617,6 +626,7 @@
                     "name": "Super Hercules",
                     "introduction_year": 1999,
                     "status": "Active",
+                    "image": "c130j.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -698,6 +708,7 @@
                     "name": "Raptor",
                     "introduction_year": 2005,
                     "status": "Active",
+                    "image": "f22a.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -763,6 +774,7 @@
                     "name": "Lightning II",
                     "introduction_year": 2015,
                     "status": "Active",
+                    "image": "f35.png",
                     "description": "The F-35 Lightning II is a 5th-generation multi-role stealth fighter developed as part of the Joint Strike Fighter program. It comes in three variants: F-35A (conventional takeoff), F-35B (short takeoff/vertical landing), and F-35C (carrier variant).",
                     "specifications": {
                         "dimensions": {
@@ -820,6 +832,7 @@
                     "name": "Flying Fortress",
                     "introduction_year": 1942,
                     "status": "Retired",
+                    "image": "b17g.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -887,6 +900,7 @@
                     "name": "Superfortress",
                     "introduction_year": 1944,
                     "status": "Retired",
+                    "image": "b29.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -959,6 +973,7 @@
                     "name": "Stratofortress",
                     "introduction_year": 1955,
                     "status": "Active",
+                    "image": "b52.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1012,6 +1027,7 @@
                     "name": "Chinook",
                     "introduction_year": 1962,
                     "status": "Active",
+                    "image": "ch47.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1073,6 +1089,7 @@
                     "name": "Thunderbolt II",
                     "introduction_year": 1977,
                     "status": "Active",
+                    "image": "a10.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1126,6 +1143,7 @@
                     "name": "Hornet",
                     "introduction_year": 1983,
                     "status": "Active",
+                    "image": "fa18.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1198,6 +1216,7 @@
                     "name": "Strike Eagle",
                     "introduction_year": 1988,
                     "status": "Active",
+                    "image": "f15.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1251,6 +1270,7 @@
                     "name": "Super Hornet",
                     "introduction_year": 1999,
                     "status": "Active",
+                    "image": "fa18e.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1323,6 +1343,7 @@
                     "name": "NGAD",
                     "introduction_year": 2029,
                     "status": "Development",
+                    "image": "f47.png",
                     "specifications": {
                         "dimensions": {
                             "length": {

@@ -4,13 +4,34 @@
 
 {% block content %}
 <div class="text-center mb-5">
-    <h1 class="page-title">
-        <i class="fas fa-plane"></i> HangarStack
-    </h1>
     <p class="page-subtitle">Comprehensive information about military and civilian aircrafts</p>
 </div>
 
-<div class="row mb-5">
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-center mb-4" style="color: #00d4ff; font-weight: 600; font-family: 'Orbitron', monospace; text-transform: uppercase; letter-spacing: 2px;">Select a Manufacturer</h2>
+    </div>
+</div>
+
+<div class="manufacturer-grid">
+    {% for manufacturer in manufacturers %}
+    <div class="manufacturer-card">
+        <div class="manufacturer-icon">
+            <i class="fa-solid fa-database"></i>
+        </div>
+        <div class="manufacturer-title">{{ manufacturer }}</div>
+        <div class="manufacturer-description">
+            Browse aircrafts from {{ manufacturer }}
+        </div>
+        <a href="{{ url_for('manufacturer', manufacturer_name=manufacturer) }}" 
+           class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i>View Aircrafts
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-5">
     <div class="col-md-8 offset-md-2">
         <div class="card db-info-card">
             <div class="card-header">
@@ -30,29 +51,5 @@
             </div>
         </div>
     </div>
-</div>
-
-<div class="row">
-    <div class="col-12">
-        <h2 class="text-center mb-4" style="color: #00d4ff; font-weight: 600; font-family: 'Orbitron', monospace; text-transform: uppercase; letter-spacing: 2px;">Select a Manufacturer</h2>
-    </div>
-</div>
-
-<div class="manufacturer-grid">
-    {% for manufacturer in manufacturers %}
-    <div class="manufacturer-card">
-        <div class="manufacturer-icon">
-            <i class="fas fa-industry"></i>
-        </div>
-        <div class="manufacturer-title">{{ manufacturer }}</div>
-        <div class="manufacturer-description">
-            Browse aircraft from {{ manufacturer }}
-        </div>
-        <a href="{{ url_for('manufacturer', manufacturer_name=manufacturer) }}" 
-           class="btn btn-primary">
-            <i class="fas fa-arrow-right"></i> View Aircraft
-        </a>
-    </div>
-    {% endfor %}
 </div>
 {% endblock %} 

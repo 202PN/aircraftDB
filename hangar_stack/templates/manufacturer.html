@@ -41,18 +41,13 @@
 <div class="aircraft-grid">
     {% for aircraft in aircraft %}
     <div class="aircraft-card">
-        <!-- Aircraft Image Container -->
-        <div class="aircraft-image-container">
-            {% if aircraft.designation %}
-                <!-- Placeholder for aircraft image - you can add actual images later -->
-                <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #001122, #003366); color: #00d4ff; font-family: 'Orbitron', monospace; font-size: 2rem; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);">
-                    <i class="fas fa-plane"></i>
-                </div>
-            {% else %}
-                <img src="{{ url_for('static', filename='images/placeholder.jpg') }}" alt="{{ aircraft.designation }}" class="aircraft-image">
-            {% endif %}
-        </div>
-        
+        {% if aircraft.image %}
+            <img src="{{ url_for('static', filename='images/' ~ aircraft.image) }}" alt="{{ aircraft.designation }}" class="aircraft-image">
+        {% else %}
+            <div style="width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #001122, #003366); color: #00d4ff; font-family: 'Orbitron', monospace; font-size: 2rem; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);">
+                <i class="fas fa-plane"></i>
+            </div>
+        {% endif %}
         <div class="aircraft-title">
             <i class="fas fa-plane text-primary"></i>
             {{ aircraft.designation }} {{ aircraft.name }}
