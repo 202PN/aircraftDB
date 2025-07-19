@@ -1,0 +1,22 @@
+# Ignore macOS system files
+.DS_Store
+**/.DS_Store
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore all log files
+*.log
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore all .tmp files in any directory
+**/*.tmp
+
+# Include a specific file even if its folder is ignored
+!important.log
