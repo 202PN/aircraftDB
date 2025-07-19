@@ -9,7 +9,8 @@
 }
 
 body {
-    background: radial-gradient(ellipse at center, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    background: #0a1833 url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><g opacity="0.08"><path d="M0 10H100M0 20H100M0 30H100M0 40H100M0 50H100M0 60H100M0 70H100M0 80H100M0 90H100M10 0V100M20 0V100M30 0V100M40 0V100M50 0V100M60 0V100M70 0V100M80 0V100M90 0V100" stroke="white" stroke-width="0.5"/></g></svg>');
+    background-size: 80px 80px;
     min-height: 100vh;
     color: #00d4ff;
     overflow-x: hidden;
@@ -600,3 +601,74 @@ body::before {
 @keyframes spin {
     to { transform: rotate(360deg); }
 } 
+
+/* Blueprint Aircraft Detail Layout */
+.blueprint-bg {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 3rem 0;
+}
+.blueprint-centerpiece {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blueprint-aircraft-img {
+  max-width: 900px;
+  max-height: 900px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 16px #00d4ff) brightness(1.2) contrast(1.1);
+  background: transparent;
+  border-radius: 12px;
+  z-index: 2;
+  position: relative;
+}
+.blueprint-placeholder {
+  width: 340px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d4ff;
+  font-size: 5rem;
+  border: 2px solid #00d4ff;
+  border-radius: 12px;
+  background: rgba(10,24,51,0.7);
+}
+.blueprint-lines {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+.blueprint-lines line {
+  stroke: #00d4ff;
+  stroke-width: 2;
+  opacity: 0.7;
+  filter: drop-shadow(0 0 6px #00d4ff);
+}
+.blueprint-callout {
+  position: absolute;
+  background: rgba(10,24,51,0.85);
+  color: #00d4ff;
+  border: 1.5px solid #00d4ff;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  min-width: 120px;
+  box-shadow: 0 0 12px #00d4ff44;
+  z-index: 3;
+  text-align: center;
+}
+.blueprint-callout-topleft { top: 30px; left: -110px; }
+.blueprint-callout-topright { top: 30px; right: -110px; }
+.blueprint-callout-bottomleft { bottom: 30px; left: -110px; }
+.blueprint-callout-bottomright { bottom: 30px; right: -110px; } 
