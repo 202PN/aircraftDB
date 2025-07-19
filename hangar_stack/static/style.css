@@ -27,6 +27,39 @@ p {
     color: rgba(255, 255, 255, 0.8) !important;
 }
 
+/* Breadcrumb Styling */
+.breadcrumb {
+    background: transparent;
+    padding: 0.75rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-item {
+    color: #00d4ff;
+    font-weight: 500;
+}
+
+.breadcrumb-item a {
+    color: #00d4ff !important;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+.breadcrumb-item.active {
+    color: #00d4ff !important;
+    font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: #00d4ff;
+    content: ">";
+}
+
 /* Holographic Background Effects */
 body::before {
     content: '';

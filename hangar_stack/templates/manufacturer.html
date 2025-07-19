@@ -71,7 +71,7 @@
             {{ aircraft.description[:150] }}{% if aircraft.description|length > 150 %}...{% endif %}
         </p>
         {% endif %}
-        <a href="{{ url_for('aircraft_detail', manufacturer_name=manufacturer, designation=aircraft.designation) }}" 
+        <a href="{{ url_for('aircraft_detail', manufacturer_name=manufacturer, designation=aircraft.designation|urlencode) }}" 
            class="btn btn-primary">
             <i class="fas fa-info-circle"></i> View Details
         </a>

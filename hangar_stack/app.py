@@ -59,7 +59,7 @@ def aircraft_api(manufacturer_name):
         'aircraft': sorted_aircraft
     })
 
-@app.route('/aircraft/<manufacturer_name>/<designation>')
+@app.route('/aircraft/<manufacturer_name>/<path:designation>')
 def aircraft_detail(manufacturer_name, designation):
     """Show detailed information for a specific aircraft"""
     db = load_database()

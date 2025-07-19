@@ -805,9 +805,9 @@
                             "max_speed": {
                                 "mach": 1.6
                             },
-                            "combat_radius": {
-                                "nautical_miles": 669,
-                                "kilometers": 1239
+                            "range": {
+                                "nautical_miles": 1200,
+                                "kilometers": 2200
                             },
                             "service_ceiling": {
                                 "feet": 50000,
@@ -927,7 +927,7 @@
                             }
                         },
                         "performance": {
-                            "maximum_speed": {
+                            "max_speed": {
                                 "knots": 310,
                                 "mph": 357,
                                 "km_h": 574
@@ -1041,6 +1041,10 @@
                             "rotor_diameter": {
                                 "feet": 60,
                                 "meters": 18.3
+                            },
+                            "wingspan": {
+                                "feet": 60,
+                                "meters": 18.3
                             }
                         },
                         "weights": {
@@ -1054,7 +1058,7 @@
                             }
                         },
                         "performance": {
-                            "maximum_speed": {
+                            "max_speed": {
                                 "knots": 170,
                                 "kilometers_per_hour": 315
                             },
@@ -1390,6 +1394,7 @@
                     "name": "Freedom Fighter/Tiger II",
                     "introduction_year": 1962,
                     "status": "Active (Export)",
+                    "image": "f5tiger.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1421,9 +1426,9 @@
                                 "mph": 1060,
                                 "kmh": 1706
                             },
-                            "combat_radius": {
-                                "miles": 760,
-                                "kilometers": 1223
+                            "range": {
+                                "miles": 554,
+                                "kilometers": 891
                             },
                             "service_ceiling": {
                                 "feet": 51800,
@@ -1462,6 +1467,7 @@
                     "name": "Intruder",
                     "introduction_year": 1963,
                     "status": "Retired",
+                    "image": "a6e.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1570,6 +1576,7 @@
                     "name": "Advanced Hawkeye",
                     "introduction_year": 1964,
                     "status": "Active",
+                    "image": "e2d.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1665,6 +1672,7 @@
                     "name": "Greyhound",
                     "introduction_year": 1966,
                     "status": "Active",
+                    "image": "c2a.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1752,6 +1760,7 @@
                     "name": "Tomcat",
                     "introduction_year": 1974,
                     "status": "Retired",
+                    "image": "f14.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1826,6 +1835,7 @@
                     "name": "Prowler",
                     "introduction_year": 1971,
                     "status": "Retired",
+                    "image": "ea6b.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1882,6 +1892,7 @@
                     "name": "Black Widow II",
                     "introduction_year": 1990,
                     "status": "Prototype/Cancelled",
+                    "image": "yf23.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1944,6 +1955,7 @@
                     "name": "Fire Scout",
                     "introduction_year": 2009,
                     "status": "Active",
+                    "image": "mq8.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -1957,6 +1969,10 @@
                             "height": {
                                 "feet": 9.71,
                                 "meters": 2.96
+                            },
+                            "wingspan":{
+                                "feet": 27.6,
+                                "meters": 8.4
                             }
                         },
                         "weights": {
@@ -2017,6 +2033,7 @@
                     "name": "UCAS-D",
                     "introduction_year": 2011,
                     "status": "Retired (Test Program)",
+                    "image": "x47b.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -2080,6 +2097,7 @@
                     "name": "Spirit",
                     "introduction_year": 1997,
                     "status": "Active",
+                    "image": "b2a.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -2133,6 +2151,7 @@
                     "name": "Global Hawk",
                     "introduction_year": 1998,
                     "status": "Active",
+                    "image": "rq4.png",
                     "specifications": {
                         "dimensions": {
                             "length": {
@@ -2186,6 +2205,7 @@
                     "name": "Raider",
                     "introduction_year": 2027,
                     "status": "Development/Testing",
+                    "image": "b21.png",
                     "specifications": {
                         "dimensions": {
                             "length": {

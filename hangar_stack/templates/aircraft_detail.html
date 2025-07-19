@@ -55,11 +55,18 @@
     <div class="blueprint-callout blueprint-callout-bottomright">
       <div>Range:<br>
         <span>
-          {% if aircraft.specifications.performance.range.nautical_miles %}
+          {% if aircraft.specifications.performance.combat_range is defined and aircraft.specifications.performance.combat_range.nautical_miles %}
+            Combat: {{ aircraft.specifications.performance.combat_range.nautical_miles }} nm
+            {% if aircraft.specifications.performance.combat_range.kilometers %}
+              ({{ aircraft.specifications.performance.combat_range.kilometers }} km)
+            {% endif %}
+          {% elif aircraft.specifications.performance.range is defined and aircraft.specifications.performance.range.nautical_miles %}
             {{ aircraft.specifications.performance.range.nautical_miles }} nm
-          {% endif %}
-          {% if aircraft.specifications.performance.range.kilometers %}
-            ({{ aircraft.specifications.performance.range.kilometers }} km)
+            {% if aircraft.specifications.performance.range.kilometers %}
+              ({{ aircraft.specifications.performance.range.kilometers }} km)
+            {% endif %}
+          {% else %}
+            N/A
           {% endif %}
         </span>
       </div>
