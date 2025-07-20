@@ -1,8 +1,24 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 from datetime import datetime
+import logging
+
+# Initialize logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+# Initialize Kafka producer (optional - will be None if Kafka is not available)
+kafka_producer = None
+try:
+    from kafka_producer import HangarStackProducer
+    kafka_producer = HangarStackProducer()
+    logger.info("Kafka producer initialized successfully")
+except ImportError:
+    logger.warning("Kafka dependencies not installed. Running without Kafka integration.")
+except Exception as e:
+    logger.warning(f"Failed to initialize Kafka producer: {e}. Running without Kafka integration.")
 
 # Load the aircraft database
 def load_database():
@@ -62,6 +78,17 @@ def aircraft_api(manufacturer_name):
 @app.route('/aircraft/<manufacturer_name>/<path:designation>')
 def aircraft_detail(manufacturer_name, designation):
     """Show detailed information for a specific aircraft"""
+    # Track aircraft view with Kafka if available
+    if kafka_producer:
+        try:
+            kafka_producer.send_aircraft_view(
+                designation,
+                request.remote_addr,
+                request.headers.get('User-Agent', '')
+            )
+        except Exception as e:
+            logger.error(f"Failed to track aircraft view: {e}")
+    
     db = load_database()
     manufacturers = db.get('manufacturers', {})
     if manufacturer_name not in manufacturers:
@@ -77,6 +104,38 @@ def aircraft_detail(manufacturer_name, designation):
     return render_template('aircraft_detail.html',
                          aircraft=aircraft,
                          manufacturer=manufacturer_name)
+
+# Add API endpoint for tracking aircraft views
+@app.route('/api/aircraft/<path:designation>/view', methods=['POST'])
+def track_aircraft_view(designation):
+    """API endpoint for tracking aircraft views"""
+    if kafka_producer:
+        try:
+            kafka_producer.send_aircraft_view(
+                designation,
+                request.remote_addr,
+                request.headers.get('User-Agent', '')
+            )
+            return jsonify({'status': 'success', 'message': 'View tracked'})
+        except Exception as e:
+            logger.error(f"Failed to track aircraft view: {e}")
+            return jsonify({'status': 'error', 'message': str(e)}), 500
+    else:
+        return jsonify({'status': 'success', 'message': 'Kafka not available'})
+
+# Cleanup on app shutdown
+import atexit
+
+def cleanup():
+    if kafka_producer:
+        try:
+            kafka_producer.close()
+            logger.info("Kafka producer closed")
+        except Exception as e:
+            logger.error(f"Error closing Kafka producer: {e}")
+
+# Register cleanup function to run when the app exits
+atexit.register(cleanup)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000) 
