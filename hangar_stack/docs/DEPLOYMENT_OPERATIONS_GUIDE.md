@@ -942,8 +942,3 @@ curl -f http://localhost:8000/metrics
 - [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---
-
-## 💡 Interview & Learning Tip
-
-- For interviews, discuss Docker/K8s readiness and show the deployment scripts and diagrams.
-- For learning, try deploying locally with Docker Compose, then explore cloud deployment options. 

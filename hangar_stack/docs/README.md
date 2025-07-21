@@ -1,6 +1,6 @@
 # HangarStack - Aircraft Database Web Application
 
-A modern, Tony Stark-inspired aircraft database web application built with Flask, featuring a holographic interface, real-time analytics, and comprehensive aircraft information with full Confluent Cloud integration.
+A modern aircraft database web application built with Flask, featuring an advanced, interactive interface, real-time analytics, and comprehensive aircraft information with full Confluent Cloud integration.
 
 ---
 
@@ -11,7 +11,7 @@ A modern, Tony Stark-inspired aircraft database web application built with Flask
 - **Tests:** All test scripts in `tests/`
 - **Docs:** All guides and summaries in `docs/`
 - **Data:** JSON aircraft database in `data/`
-- **Frontend:** HTML/CSS/JS in `templates/` and `static/`
+- **Frontend:** HTML/CSS/JS in `templates/` and `static/` (advanced, interactive UI)
 
 ---
 
@@ -111,7 +111,7 @@ hangar_stack/
 
 ## 📈 Project Highlights
 
-- **Modern UI:** Holographic, Tony Stark-inspired design.
+- **Modern UI:** Advanced, interactive, and visually engaging design.
 - **Real-Time Analytics:** Kafka + Confluent Cloud event streaming.
 - **Production Ready:** Docker/K8s, CI/CD, monitoring, and security best practices.
 - **Comprehensive Testing:** Unit, integration, and end-to-end tests.
@@ -119,4 +119,4 @@ hangar_stack/
 
 ---
 
-**HangarStack** - Where aviation meets technology in a holographic interface, powered by real-time event streaming! 
+**HangarStack** - Where aviation meets technology in a modern, interactive interface, powered by real-time event streaming! 

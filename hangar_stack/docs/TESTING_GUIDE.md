@@ -404,12 +404,3 @@ python test_confluent.py 2>&1 >> test_report.txt
 - [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---
-
-## 💡 Interview & Learning Tip
-
-- For interviews, run `kafka/test_confluent.py` and `tests/test_flask_kafka.py` to show real integration and end-to-end tests.
-- For learning, read the test code and try adding your own tests in `tests/`.
-
----
-
-**HangarStack Testing** - Ensuring reliable, scalable, and performant event streaming! 🧪✨ 

@@ -1,7 +1,5 @@
 # Confluent Cloud Setup Guide for HangarStack
 
-This guide will walk you through setting up Confluent Cloud integration for your HangarStack application. The integration has been thoroughly tested and is production-ready.
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -351,12 +349,3 @@ FLASK_DEBUG=false
 - [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---
-
-## 💡 Interview & Learning Tip
-
-- For interviews, show how you set up Confluent Cloud and run integration tests using the scripts in `kafka/`.
-- For learning, follow the step-by-step setup and then explore the code in `kafka/` and the test scripts.
-
----
-
-**HangarStack + Confluent Cloud** - A powerful combination of aviation data and real-time event streaming! 🛩️✨ 
