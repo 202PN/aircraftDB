@@ -149,7 +149,6 @@ class HangarStackConsumer:
 python test_confluent.py
 
 # Expected output:
-🚀 Confluent Cloud Integration Test
 ==================================================
 🔗 Testing Confluent Cloud Connection... ✅
 📤 Testing Producer... ✅

@@ -4,7 +4,7 @@ A modern aircraft database web application built with Flask, featuring an advanc
 
 ---
 
-## 🚀 Project Tour
+## Project Tour
 
 - **Backend:** Flask (Python) web app in `app.py`
 - **Kafka Integration:** All Kafka code in `kafka/` (producer, consumer, config, scripts)
@@ -15,7 +15,7 @@ A modern aircraft database web application built with Flask, featuring an advanc
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 hangar_stack/
@@ -58,7 +58,7 @@ hangar_stack/
 
 ---
 
-## 🧑‍💻 How to Use for Interview Demos
+## How to Use for Interview Demos
 
 - **Showcase Real-Time Analytics:** Run the app, view aircraft pages, and use `kafka/view_topic_messages.py` to show live Kafka events.
 - **Demonstrate Testing:** Run `kafka/test_confluent.py` and `tests/test_flask_kafka.py` to show integration and end-to-end tests.
@@ -68,7 +68,7 @@ hangar_stack/
 
 ---
 
-## 📚 Learning Path
+## Learning Path
 
 1. **Kafka Basics:** Read `docs/CONFLUENT_SETUP_GUIDE.md` and `docs/APPLICATION_SUMMARY.md`.
 2. **Event Streaming:** Study the code in `kafka/` and run the test scripts.
@@ -79,7 +79,7 @@ hangar_stack/
 
 ---
 
-## 🔗 Related Documentation
+## Related Documentation
 
 - [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
 - [Testing Guide](TESTING_GUIDE.md)
@@ -89,7 +89,7 @@ hangar_stack/
 
 ---
 
-## 🏆 Interview Demo Tips
+## Interview Demo Tips
 
 - **Show live event streaming:** Open two terminals, run the app, and use the Kafka viewer script to show real-time events.
 - **Explain code organization:** Point out the separation of concerns (Kafka, tests, docs, app, data).
@@ -99,7 +99,7 @@ hangar_stack/
 
 ---
 
-## 🛠️ How to Extend
+## How to Extend
 
 - **Add new Kafka topics:** Edit `kafka/kafka_config.py` and update the producer/consumer.
 - **Add new event types:** Implement new methods in `kafka/kafka_producer.py` and `kafka/kafka_consumer.py`.
@@ -109,7 +109,7 @@ hangar_stack/
 
 ---
 
-## 📈 Project Highlights
+## Project Highlights
 
 - **Modern UI:** Advanced, interactive, and visually engaging design.
 - **Real-Time Analytics:** Kafka + Confluent Cloud event streaming.
