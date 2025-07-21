@@ -19,11 +19,11 @@ This guide covers all testing procedures for the HangarStack application, includ
 pip install -r requirements.txt
 
 # Run comprehensive Confluent Cloud tests
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 
 # Run basic Kafka tests
-python test_kafka.py producer
-python test_kafka.py consumer aircraft_views
+python hangar_kafka/test_kafka.py producer
+python hangar_kafka/test_kafka.py consumer aircraft_views
 ```
 
 ## 📊 Confluent Cloud Integration Tests
@@ -226,7 +226,7 @@ cat .env | grep KAFKA
 
 # Test connection manually
 python -c "
-from kafka_config import get_connection_info
+from hangar_stack.hangar_kafka.kafka_config import get_connection_info
 print(get_connection_info())
 "
 ```
@@ -279,7 +279,7 @@ grep -i timeout test_output.log
 
 # Test individual components
 python -c "
-from kafka_producer import HangarStackProducer
+from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
 producer = HangarStackProducer()
 print('Producer created successfully')
 producer.close()
@@ -292,7 +292,7 @@ producer.close()
 ```bash
 # Send high volume of events
 python -c "
-from kafka_producer import HangarStackProducer
+from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
 import time
 
 producer = HangarStackProducer()
@@ -307,98 +307,9 @@ producer.close()
 "
 ```
 
-### Latency Testing
-```bash
-# Measure end-to-end latency
-python test_confluent.py
-# Check the timing output in the logs
-```
+## Related Documentation
 
-## 🔄 Continuous Testing
-
-### Automated Test Script
-Create a test runner script:
-
-```bash
-#!/bin/bash
-# test_runner.sh
-
-echo "🧪 Running HangarStack Test Suite"
-echo "=================================="
-
-# Run Confluent Cloud tests
-echo "📊 Testing Confluent Cloud Integration..."
-python test_confluent.py
-
-if [ $? -eq 0 ]; then
-    echo "✅ Confluent Cloud tests passed"
-else
-    echo "❌ Confluent Cloud tests failed"
-    exit 1
-fi
-
-# Run basic Kafka tests
-echo "📤 Testing Producer..."
-python test_kafka.py producer
-
-echo "📥 Testing Consumer..."
-python test_kafka.py consumer aircraft_views
-
-echo "🎉 All tests completed!"
-```
-
-### Scheduled Testing
-```bash
-# Add to crontab for daily testing
-0 9 * * * cd /path/to/hangar_stack && ./test_runner.sh >> test_logs.txt 2>&1
-```
-
-## 📈 Test Metrics
-
-### Success Criteria
-- **Connection Success Rate**: 100%
-- **Producer Success Rate**: 100%
-- **Consumer Success Rate**: 100%
-- **End-to-End Success Rate**: 100%
-- **Average Latency**: < 100ms
-- **Test Execution Time**: < 60 seconds
-
-### Monitoring
-```bash
-# Track test results over time
-echo "$(date): $(python test_confluent.py 2>&1 | grep -c '✅') tests passed" >> test_history.log
-
-# Generate test report
-echo "Test Report - $(date)" > test_report.txt
-python test_confluent.py 2>&1 >> test_report.txt
-```
-
-## 🛠️ Test Development
-
-### Adding New Tests
-1. **Create test function** in appropriate test file
-2. **Add assertions** for expected behavior
-3. **Include error handling** for edge cases
-4. **Document test purpose** and expected results
-5. **Add to test suite** for automated execution
-
-### Test Best Practices
-- **Isolation**: Each test should be independent
-- **Cleanup**: Always clean up resources after tests
-- **Timeout**: Include appropriate timeouts
-- **Logging**: Provide detailed logging for debugging
-- **Documentation**: Document test purpose and expected results
-
-## 📚 Additional Resources
-
-- [Confluent Cloud Testing](https://docs.confluent.io/cloud/current/client-apps/testing.html)
-- [Kafka Python Testing](https://kafka-python.readthedocs.io/en/master/testing.html)
-- [Python Testing Best Practices](https://docs.python-guide.org/writing/tests/)
-
-## 📚 Where to Learn More
-
-- [README (Project Tour & Learning Path)](README.md)
 - [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
+- [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)
----

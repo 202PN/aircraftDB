@@ -16,7 +16,7 @@
 ### Step 2: Run Automated Setup
 ```bash
 # Run the automated setup script
-python confluent_setup.py
+python hangar_kafka/confluent_setup.py
 ```
 
 This script will:
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ### Step 4: Test Integration
 ```bash
 # Run comprehensive integration tests
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 ```
 
 Expected output:
@@ -63,7 +63,7 @@ Testing Confluent Cloud Connection...
 
 ### Step 5: Run Application
 ```bash
-python app.py
+python3 -m hangar_stack.app
 ```
 
 ## Manual Setup (Alternative)
@@ -164,7 +164,7 @@ The application uses these topics:
 
 ### Comprehensive Integration Test
 ```bash
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 ```
 
 This test covers:
@@ -177,10 +177,10 @@ This test covers:
 ### Individual Component Tests
 ```bash
 # Test producer only
-python test_kafka.py producer
+python hangar_kafka/test_kafka.py producer
 
 # Test consumer only
-python test_kafka.py consumer aircraft_views
+python hangar_kafka/test_kafka.py consumer aircraft_views
 ```
 
 ### Monitor in Confluent Cloud Console
@@ -226,7 +226,7 @@ python test_kafka.py consumer aircraft_views
 **Error:** Consumer appears to hang or timeout
 **Solution:**
 - This was fixed in the latest test script
-- Use `python test_confluent.py` for proper timeout handling
+- Use `python hangar_kafka/test_confluent.py` for proper timeout handling
 - Check that topics have messages to consume
 
 ### Debug Commands
@@ -257,7 +257,7 @@ confluent kafka cluster describe CLUSTER_ID
 The test script provides detailed logging:
 ```bash
 # Run with verbose logging
-python test_confluent.py 2>&1 | tee test_output.log
+python hangar_kafka/test_confluent.py 2>&1 | tee test_output.log
 
 # Check for specific errors
 grep -i error test_output.log
@@ -309,7 +309,7 @@ FLASK_DEBUG=false
 ## Success Indicators
 
 ### Integration Success
-- All test cases pass: `python test_confluent.py`
+- All test cases pass: `python hangar_kafka/test_confluent.py`
 - Messages flow end-to-end without errors
 - Consumer receives messages within expected timeframes
 - No connection timeouts or authentication failures
@@ -323,7 +323,7 @@ FLASK_DEBUG=false
 ## Maintenance
 
 ### Regular Tasks
-- Health Checks: Run `python test_confluent.py` weekly
+- Health Checks: Run `python hangar_kafka/test_confluent.py` weekly
 - API Key Rotation: Rotate keys every 90 days
 - Topic Monitoring: Check topic growth and cleanup old data
 - Performance Review: Monitor metrics and optimize as needed
@@ -343,6 +343,13 @@ FLASK_DEBUG=false
 ## Where to Learn More
 
 - [README (Project Tour & Learning Path)](README.md)
+- [Testing Guide](TESTING_GUIDE.md)
+- [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
+- [Application Summary](APPLICATION_SUMMARY.md)
+
+## Related Documentation
+
+- [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)

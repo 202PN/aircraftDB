@@ -59,54 +59,12 @@ The application implements 5 distinct Kafka topics for comprehensive event track
 
 ### Producer Implementation
 ```python
-class HangarStackProducer:
-    def __init__(self):
-        # Confluent Cloud configuration with SASL_SSL
-        self.producer = KafkaProducer(
-            bootstrap_servers=KAFKA_CONFIG['bootstrap_servers'],
-            security_protocol='SASL_SSL',
-            sasl_mechanism='PLAIN',
-            sasl_plain_username=KAFKA_CONFIG['sasl_username'],
-            sasl_plain_password=KAFKA_CONFIG['sasl_password'],
-            value_serializer=lambda x: json.dumps(x).encode('utf-8')
-        )
-    
-    def send_aircraft_view(self, aircraft_designation, user_ip, user_agent):
-        event = {
-            'event_type': 'aircraft_view',
-            'aircraft_designation': aircraft_designation,
-            'user_ip': user_ip,
-            'user_agent': user_agent,
-            'timestamp': datetime.utcnow().isoformat()
-        }
-        self.producer.send('hangarstack.aircraft.views', event)
+from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
 ```
 
 ### Consumer Implementation
 ```python
-class HangarStackConsumer:
-    def __init__(self, topic, group_id='hangarstack_group'):
-        self.consumer = KafkaConsumer(
-            topic,
-            bootstrap_servers=KAFKA_CONFIG['bootstrap_servers'],
-            security_protocol='SASL_SSL',
-            sasl_mechanism='PLAIN',
-            sasl_plain_username=KAFKA_CONFIG['sasl_username'],
-            sasl_plain_password=KAFKA_CONFIG['sasl_password'],
-            group_id=group_id,
-            auto_offset_reset='earliest',
-            value_deserializer=lambda x: json.loads(x.decode('utf-8'))
-        )
-    
-    def process_message(self, message):
-        event = message.value
-        event_type = event.get('event_type')
-        
-        if event_type == 'aircraft_view':
-            self.handle_aircraft_view(event)
-        elif event_type == 'user_activity':
-            self.handle_user_activity(event)
-        # Additional event handlers...
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
 ```
 
 ## Key Kafka/Confluent Cloud Features Demonstrated
@@ -259,5 +217,6 @@ HangarStack demonstrates advanced proficiency in Apache Kafka and Confluent Clou
 - [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
+- [Application Summary](APPLICATION_SUMMARY.md)
 
 ---

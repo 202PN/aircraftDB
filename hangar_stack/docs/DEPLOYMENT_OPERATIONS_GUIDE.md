@@ -627,7 +627,7 @@ ls -la /home/hangarstack/hangarstack/
 #### Confluent Cloud Connection Issues
 ```bash
 # Test connection
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 
 # Check credentials
 cat .env | grep KAFKA
@@ -708,7 +708,7 @@ free -h
 #### Weekly Tasks
 ```bash
 # Run comprehensive tests
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 
 # Update system packages
 sudo apt update && sudo apt upgrade -y
@@ -804,7 +804,7 @@ confluent api-key create --resource CLUSTER_ID --description "New Production Key
 
 # Update application with new key
 # Test with new key
-python test_confluent.py
+python hangar_kafka/test_confluent.py
 
 # Delete old key
 confluent api-key delete OLD_KEY_ID
@@ -927,3 +927,10 @@ curl -f http://localhost:8000/metrics
 - [Application Summary](APPLICATION_SUMMARY.md)
 
 ---
+
+## Related Documentation
+
+- [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
+- [Testing Guide](TESTING_GUIDE.md)
+- [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
+- [Application Summary](APPLICATION_SUMMARY.md)
