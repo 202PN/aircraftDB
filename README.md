@@ -58,7 +58,7 @@ hangar_stack/
 
 ---
 
-## Learning Path
+## Learn More
 
 1. **Kafka Basics:** Read `docs/CONFLUENT_SETUP_GUIDE.md` and `docs/APPLICATION_SUMMARY.md`.
 2. **Event Streaming:** Study the code in `kafka/` and run the test scripts.
@@ -74,16 +74,6 @@ hangar_stack/
 - [Testing Guide](hangar_stack/docs/TESTING_GUIDE.md)
 - [Deployment & Operations Guide](hangar_stack/docs/DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](hangar_stack/docs/APPLICATION_SUMMARY.md)
-
----
-
-## How to Extend
-
-- **Add new Kafka topics:** Edit `kafka/kafka_config.py` and update the producer/consumer.
-- **Add new event types:** Implement new methods in `kafka/kafka_producer.py` and `kafka/kafka_consumer.py`.
-- **Add new tests:** Place new test scripts in `tests/` and update `docs/TESTING_GUIDE.md`.
-- **Improve UI:** Edit templates and static assets.
-- **Switch to SQL:** Replace JSON data in `data/` with a database and update data access code in `src/`.
 
 ---
 

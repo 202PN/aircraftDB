@@ -2,7 +2,7 @@
 
 This guide covers all testing procedures for the HangarStack application, including unit tests, integration tests, and Confluent Cloud connectivity tests.
 
-## 🧪 Testing Overview
+## Testing Overview
 
 ### Test Categories
 1. **Unit Tests**: Individual component testing
@@ -11,7 +11,7 @@ This guide covers all testing procedures for the HangarStack application, includ
 4. **Performance Tests**: Load and stress testing
 5. **UI Tests**: Frontend functionality testing
 
-## 🚀 Quick Test Suite
+## Quick Test Suite
 
 ### Run All Tests
 ```bash
@@ -26,7 +26,7 @@ python hangar_kafka/test_kafka.py producer
 python hangar_kafka/test_kafka.py consumer aircraft_views
 ```
 
-## 📊 Confluent Cloud Integration Tests
+## Confluent Cloud Integration Tests
 
 ### Comprehensive Integration Test
 The main test script `test_confluent.py` performs a complete integration test:
