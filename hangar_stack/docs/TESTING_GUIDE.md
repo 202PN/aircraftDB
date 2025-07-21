@@ -306,10 +306,3 @@ print(f'Sent 1000 events in {end_time - start_time:.2f} seconds')
 producer.close()
 "
 ```
-
-## Related Documentation
-
-- [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
-- [Testing Guide](TESTING_GUIDE.md)
-- [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
-- [Application Summary](APPLICATION_SUMMARY.md)

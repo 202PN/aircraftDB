@@ -340,18 +340,4 @@ FLASK_DEBUG=false
 - [Confluent Cloud Pricing](https://www.confluent.io/confluent-cloud/pricing/)
 - [Community Support](https://community.confluent.io/)
 
-## Where to Learn More
-
-- [README (Project Tour & Learning Path)](README.md)
-- [Testing Guide](TESTING_GUIDE.md)
-- [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
-- [Application Summary](APPLICATION_SUMMARY.md)
-
-## Related Documentation
-
-- [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
-- [Testing Guide](TESTING_GUIDE.md)
-- [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
-- [Application Summary](APPLICATION_SUMMARY.md)
-
 ---

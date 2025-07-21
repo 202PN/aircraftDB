@@ -70,10 +70,10 @@ hangar_stack/
 
 ## Related Documentation
 
-- [Confluent Cloud Setup Guide](docs/CONFLUENT_SETUP_GUIDE.md)
-- [Testing Guide](docs/TESTING_GUIDE.md)
-- [Deployment & Operations Guide](docs/DEPLOYMENT_OPERATIONS_GUIDE.md)
-- [Application Summary](docs/APPLICATION_SUMMARY.md)
+- [Confluent Cloud Setup Guide](hangar_stack/docs/CONFLUENT_SETUP_GUIDE.md)
+- [Testing Guide](hangar_stack/docs/TESTING_GUIDE.md)
+- [Deployment & Operations Guide](hangar_stack/docs/DEPLOYMENT_OPERATIONS_GUIDE.md)
+- [Application Summary](hangar_stack/docs/APPLICATION_SUMMARY.md)
 
 ---
 
