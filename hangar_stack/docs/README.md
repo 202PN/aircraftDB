@@ -64,7 +64,6 @@ hangar_stack/
 - **Demonstrate Testing:** Run `kafka/test_confluent.py` and `tests/test_flask_kafka.py` to show integration and end-to-end tests.
 - **Explain Architecture:** Use the diagrams in `docs/APPLICATION_SUMMARY.md` and `docs/DEPLOYMENT_OPERATIONS_GUIDE.md`.
 - **Discuss DevOps:** Show Docker/K8s readiness in `docs/DEPLOYMENT_OPERATIONS_GUIDE.md`.
-- **Highlight Cleanup:** Reference `docs/CLEANUP_SUMMARY.md` for your organizational skills.
 
 ---
 
@@ -75,7 +74,6 @@ hangar_stack/
 3. **Flask + Kafka Integration:** See how `app.py` uses the Kafka producer.
 4. **Testing:** Learn from `docs/TESTING_GUIDE.md` and the test scripts in `kafka/` and `tests/`.
 5. **Deployment:** Explore `docs/DEPLOYMENT_OPERATIONS_GUIDE.md` for Docker/K8s and production tips.
-6. **Cleanup & Best Practices:** Review `docs/CLEANUP_SUMMARY.md`.
 
 ---
 
@@ -85,7 +83,6 @@ hangar_stack/
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)
-- [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---
 

@@ -259,6 +259,5 @@ HangarStack demonstrates advanced proficiency in Apache Kafka and Confluent Clou
 - [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
-- [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---

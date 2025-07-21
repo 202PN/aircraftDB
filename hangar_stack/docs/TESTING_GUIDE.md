@@ -401,6 +401,4 @@ python test_confluent.py 2>&1 >> test_report.txt
 - [Confluent Cloud Setup Guide](CONFLUENT_SETUP_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)
-- [Cleanup Summary](CLEANUP_SUMMARY.md)
-
 ---

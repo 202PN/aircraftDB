@@ -1,6 +1,6 @@
 # Confluent Cloud Setup Guide for HangarStack
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Confluent Cloud account (free tier available)
@@ -41,9 +41,9 @@ python test_confluent.py
 
 Expected output:
 ```
-🚀 Confluent Cloud Integration Test
+Confluent Cloud Integration Test
 ==================================================
-🔗 Testing Confluent Cloud Connection...
+Testing Confluent Cloud Connection...
 ✅ Using Confluent Cloud configuration
 
 📤 Testing Producer...
@@ -66,7 +66,7 @@ Expected output:
 python app.py
 ```
 
-## 📋 Manual Setup (Alternative)
+## Manual Setup (Alternative)
 
 If you prefer to set up Confluent Cloud manually:
 
@@ -141,7 +141,7 @@ FLASK_ENV=development
 FLASK_DEBUG=true
 ```
 
-## 🔧 Configuration Details
+## Configuration Details
 
 ### Environment Variables
 | Variable | Description | Example |
@@ -160,7 +160,7 @@ The application uses these topics:
 - `hangarstack.search.queries` - Search query events
 - `hangarstack.system.events` - System-level events
 
-## 🧪 Testing
+## Testing
 
 ### Comprehensive Integration Test
 ```bash
@@ -168,11 +168,11 @@ python test_confluent.py
 ```
 
 This test covers:
-- ✅ Connection verification
-- ✅ Producer functionality
-- ✅ Consumer connectivity
-- ✅ Message consumption
-- ✅ End-to-end message flow
+- Connection verification
+- Producer functionality
+- Consumer connectivity
+- Message consumption
+- End-to-end message flow
 
 ### Individual Component Tests
 ```bash
@@ -190,7 +190,7 @@ python test_kafka.py consumer aircraft_views
 4. Go to "Monitoring" to see cluster metrics
 5. Check "Data Flow" for real-time message visualization
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -264,7 +264,7 @@ grep -i error test_output.log
 grep -i failed test_output.log
 ```
 
-## 🚀 Production Deployment
+## Production Deployment
 
 ### Environment Variables (Production)
 ```env
@@ -281,71 +281,70 @@ FLASK_DEBUG=false
 ```
 
 ### Performance Optimization
-- **Connection Pooling**: Configure appropriate connection limits
-- **Batch Processing**: Optimize producer batch sizes
-- **Consumer Groups**: Use multiple consumer instances for load balancing
-- **Monitoring**: Set up alerts for cluster health and performance
+- Connection Pooling: Configure appropriate connection limits
+- Batch Processing: Optimize producer batch sizes
+- Consumer Groups: Use multiple consumer instances for load balancing
+- Monitoring: Set up alerts for cluster health and performance
 
 ### Security Best Practices
-- **API Key Rotation**: Regularly rotate API keys
-- **Network Security**: Use VPC peering for enhanced security
-- **Access Control**: Implement proper RBAC policies
-- **Audit Logging**: Enable comprehensive audit trails
+- API Key Rotation: Regularly rotate API keys
+- Network Security: Use VPC peering for enhanced security
+- Access Control: Implement proper RBAC policies
+- Audit Logging: Enable comprehensive audit trails
 
-## 📊 Monitoring and Analytics
+## Monitoring and Analytics
 
 ### Confluent Cloud Metrics
-- **Cluster Health**: Monitor broker status and performance
-- **Topic Metrics**: Track message throughput and lag
-- **Consumer Groups**: Monitor consumer health and performance
-- **Network**: Track connection and bandwidth usage
+- Cluster Health: Monitor broker status and performance
+- Topic Metrics: Track message throughput and lag
+- Consumer Groups: Monitor consumer health and performance
+- Network: Track connection and bandwidth usage
 
 ### Application Metrics
-- **Event Volume**: Track events per second
-- **Latency**: Monitor end-to-end message processing time
-- **Error Rates**: Track failed message deliveries
-- **Consumer Lag**: Monitor message processing delays
+- Event Volume: Track events per second
+- Latency: Monitor end-to-end message processing time
+- Error Rates: Track failed message deliveries
+- Consumer Lag: Monitor message processing delays
 
-## 🎯 Success Indicators
+## Success Indicators
 
-### ✅ Integration Success
+### Integration Success
 - All test cases pass: `python test_confluent.py`
 - Messages flow end-to-end without errors
 - Consumer receives messages within expected timeframes
 - No connection timeouts or authentication failures
 
-### 📈 Performance Benchmarks
-- **Event Throughput**: 1000+ events per second
-- **Latency**: Sub-100ms event processing
-- **Reliability**: 99.9% uptime
-- **Scalability**: Automatic scaling based on demand
+### Performance Benchmarks
+- Event Throughput: 1000+ events per second
+- Latency: Sub-100ms event processing
+- Reliability: 99.9% uptime
+- Scalability: Automatic scaling based on demand
 
-## 🔄 Maintenance
+## Maintenance
 
 ### Regular Tasks
-- **Health Checks**: Run `python test_confluent.py` weekly
-- **API Key Rotation**: Rotate keys every 90 days
-- **Topic Monitoring**: Check topic growth and cleanup old data
-- **Performance Review**: Monitor metrics and optimize as needed
+- Health Checks: Run `python test_confluent.py` weekly
+- API Key Rotation: Rotate keys every 90 days
+- Topic Monitoring: Check topic growth and cleanup old data
+- Performance Review: Monitor metrics and optimize as needed
 
 ### Updates and Upgrades
-- **Confluent CLI**: Keep CLI updated to latest version
-- **Dependencies**: Update Python packages regularly
-- **Configuration**: Review and update settings as needed
+- Confluent CLI: Keep CLI updated to latest version
+- Dependencies: Update Python packages regularly
+- Configuration: Review and update settings as needed
 
-## 📚 Additional Resources
+## Additional Resources
 
 - [Confluent Cloud Documentation](https://docs.confluent.io/cloud/current/overview.html)
 - [Kafka Python Client Documentation](https://kafka-python.readthedocs.io/)
 - [Confluent Cloud Pricing](https://www.confluent.io/confluent-cloud/pricing/)
 - [Community Support](https://community.confluent.io/)
 
-## 📚 Where to Learn More
+## Where to Learn More
 
 - [README (Project Tour & Learning Path)](README.md)
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)
-- [Cleanup Summary](CLEANUP_SUMMARY.md)
 
 ---
