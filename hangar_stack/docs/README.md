@@ -58,15 +58,6 @@ hangar_stack/
 
 ---
 
-## How to Use for Interview Demos
-
-- **Showcase Real-Time Analytics:** Run the app, view aircraft pages, and use `kafka/view_topic_messages.py` to show live Kafka events.
-- **Demonstrate Testing:** Run `kafka/test_confluent.py` and `tests/test_flask_kafka.py` to show integration and end-to-end tests.
-- **Explain Architecture:** Use the diagrams in `docs/APPLICATION_SUMMARY.md` and `docs/DEPLOYMENT_OPERATIONS_GUIDE.md`.
-- **Discuss DevOps:** Show Docker/K8s readiness in `docs/DEPLOYMENT_OPERATIONS_GUIDE.md`.
-
----
-
 ## Learning Path
 
 1. **Kafka Basics:** Read `docs/CONFLUENT_SETUP_GUIDE.md` and `docs/APPLICATION_SUMMARY.md`.
@@ -83,16 +74,6 @@ hangar_stack/
 - [Testing Guide](TESTING_GUIDE.md)
 - [Deployment & Operations Guide](DEPLOYMENT_OPERATIONS_GUIDE.md)
 - [Application Summary](APPLICATION_SUMMARY.md)
-
----
-
-## Interview Demo Tips
-
-- **Show live event streaming:** Open two terminals, run the app, and use the Kafka viewer script to show real-time events.
-- **Explain code organization:** Point out the separation of concerns (Kafka, tests, docs, app, data).
-- **Discuss error handling:** Reference the improved consumer timeout and producer lifecycle management.
-- **Highlight documentation:** Show the comprehensive guides in `docs/`.
-- **Mention extensibility:** Point to the "How to Extend" section below.
 
 ---
 
