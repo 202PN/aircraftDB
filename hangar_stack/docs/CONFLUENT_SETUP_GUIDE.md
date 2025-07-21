@@ -143,15 +143,6 @@ FLASK_DEBUG=true
 
 ## Configuration Details
 
-### Environment Variables
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `KAFKA_BOOTSTRAP_SERVERS` | Confluent Cloud cluster endpoint | `pkc-12345.us-west-2.aws.confluent.cloud:9092` |
-| `KAFKA_SECURITY_PROTOCOL` | Security protocol | `SASL_SSL` |
-| `KAFKA_SASL_MECHANISM` | SASL mechanism | `PLAIN` |
-| `KAFKA_USERNAME` | API key | `ABC123DEF456` |
-| `KAFKA_PASSWORD` | API secret | `xyz789abc012` |
-
 ### Kafka Topics
 The application uses these topics:
 - `hangarstack.aircraft.views` - Aircraft page view events
@@ -313,12 +304,6 @@ FLASK_DEBUG=false
 - Messages flow end-to-end without errors
 - Consumer receives messages within expected timeframes
 - No connection timeouts or authentication failures
-
-### Performance Benchmarks
-- Event Throughput: 1000+ events per second
-- Latency: Sub-100ms event processing
-- Reliability: 99.9% uptime
-- Scalability: Automatic scaling based on demand
 
 ## Maintenance
 
