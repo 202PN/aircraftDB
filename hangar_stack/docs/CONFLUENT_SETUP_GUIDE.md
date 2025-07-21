@@ -20,7 +20,7 @@ python confluent_setup.py
 ```
 
 This script will:
-- Install Confluent CLI
+- Install Confluent 
 - Login to your Confluent Cloud account
 - Create environment and cluster
 - Generate API keys
