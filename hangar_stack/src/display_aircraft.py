@@ -9,6 +9,7 @@ from rich.tree import Tree
 from rich.progress import track
 from datetime import datetime
 import webbrowser
+import os
 
 def load_database(file_path: str) -> Dict:
     with open(file_path, 'r') as f:
@@ -248,7 +249,9 @@ def display_manufacturer_summary(console: Console, manufacturer: str, aircraft_l
 
 def main():
     console = Console()
-    db = load_database('data/aircraft_database.json')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(base_dir, '..', 'data', 'aircraft_database.json')
+    db = load_database(db_path)
     
     # Display header
     console.print("\n[bold blue]Aircraft Database Viewer[/bold blue]\n")

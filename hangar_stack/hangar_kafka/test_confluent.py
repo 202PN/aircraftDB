@@ -10,9 +10,9 @@ import time
 import json
 import logging
 from datetime import datetime
-from kafka_producer import HangarStackProducer
-from kafka_consumer import HangarStackConsumer
-from kafka_config import TOPICS, get_connection_info, is_confluent_cloud
+from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
+from hangar_stack.hangar_kafka.kafka_config import TOPICS, get_connection_info, is_confluent_cloud
 
 # Configure logging
 logging.basicConfig(

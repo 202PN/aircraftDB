@@ -8,9 +8,9 @@ to track events in the HangarStack application.
 
 import time
 import json
-from kafka_producer import HangarStackProducer
-from kafka_consumer import HangarStackConsumer
-from kafka_config import TOPICS
+from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
+from hangar_stack.hangar_kafka.kafka_config import TOPICS
 
 def test_producer():
     """Test the Kafka producer by sending sample events"""

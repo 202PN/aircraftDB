@@ -4,9 +4,16 @@
 
 # Ignore Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
 
-# Ignore environment files
+# Ignore virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Ignore environment variable files
 .env
 
 # Ignore all log files

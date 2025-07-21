@@ -232,10 +232,8 @@ class ConfluentSetup:
             return None
 
     def create_env_file(self, bootstrap_servers, api_key, api_secret):
-        """Create .env file with Confluent Cloud configuration"""
-        print("📄 Creating .env file...")
-        
-        env_content = f"""# Confluent Cloud Configuration
+        """Create .env file with Kafka credentials"""
+        env_content = f"""
 KAFKA_BOOTSTRAP_SERVERS={bootstrap_servers}
 KAFKA_SECURITY_PROTOCOL=SASL_SSL
 KAFKA_SASL_MECHANISM=PLAIN
@@ -246,10 +244,10 @@ KAFKA_PASSWORD={api_secret}
 FLASK_ENV=development
 FLASK_DEBUG=true
 """
-        
-        with open(self.config_file, 'w') as f:
+        config_dir = os.path.dirname(os.path.abspath(self.config_file))
+        config_path = os.path.join(config_dir, os.path.basename(self.config_file))
+        with open(config_path, 'w') as f:
             f.write(env_content)
-        
         print("✅ .env file created successfully")
 
     def setup_confluent_cloud(self):

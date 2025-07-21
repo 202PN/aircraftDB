@@ -3,7 +3,7 @@ import logging
 from datetime import datetime
 from kafka import KafkaProducer
 from kafka.errors import KafkaError
-from kafka_config import KAFKA_CONFIG, TOPICS, is_confluent_cloud, get_connection_info
+from hangar_stack.hangar_kafka.kafka_config import KAFKA_CONFIG, TOPICS, is_confluent_cloud, get_connection_info
 
 class HangarStackProducer:
     def __init__(self):

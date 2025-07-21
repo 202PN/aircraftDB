@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 from datetime import datetime
 import logging
+import os
 
 # Initialize logging
 logging.basicConfig(level=logging.INFO)
@@ -12,17 +13,19 @@ app = Flask(__name__)
 # Initialize Kafka producer (optional - will be None if Kafka is not available)
 kafka_producer = None
 try:
-    from kafka_producer import HangarStackProducer
+    from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
     kafka_producer = HangarStackProducer()
     logger.info("Kafka producer initialized successfully")
-except ImportError:
-    logger.warning("Kafka dependencies not installed. Running without Kafka integration.")
+except ImportError as e:
+    logger.warning(f"Kafka dependencies not installed. Running without Kafka integration. Details: {e}")
 except Exception as e:
     logger.warning(f"Failed to initialize Kafka producer: {e}. Running without Kafka integration.")
 
 # Load the aircraft database
 def load_database():
-    with open('data/aircraft_database.json', 'r') as f:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(base_dir, 'data', 'aircraft_database.json')
+    with open(db_path, 'r') as f:
         return json.load(f)
 
 @app.route('/')

@@ -2,7 +2,7 @@ import json
 import logging
 from datetime import datetime
 from kafka import KafkaConsumer
-from kafka_config import KAFKA_CONFIG, TOPICS, is_confluent_cloud, get_connection_info
+from hangar_stack.hangar_kafka.kafka_config import KAFKA_CONFIG, TOPICS, is_confluent_cloud, get_connection_info
 
 class HangarStackConsumer:
     def __init__(self, topic, group_id='hangarstack_group'):

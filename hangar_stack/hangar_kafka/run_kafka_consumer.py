@@ -8,8 +8,8 @@ Useful for development and testing Kafka integration.
 
 import sys
 import logging
-from kafka_consumer import HangarStackConsumer
-from kafka_config import TOPICS
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
+from hangar_stack.hangar_kafka.kafka_config import TOPICS
 
 # Configure logging
 logging.basicConfig(

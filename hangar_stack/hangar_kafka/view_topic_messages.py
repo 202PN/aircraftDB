@@ -9,8 +9,8 @@ import json
 import sys
 import time
 from datetime import datetime
-from kafka_consumer import HangarStackConsumer
-from kafka_config import TOPICS
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
+from hangar_stack.hangar_kafka.kafka_config import TOPICS
 
 def format_message(message):
     """Format a Kafka message for display"""

@@ -7,8 +7,8 @@ This script tests if the Flask app's Kafka producer is working correctly.
 
 import requests
 import time
-from kafka_consumer import HangarStackConsumer
-from kafka_config import TOPICS
+from hangar_stack.hangar_kafka.kafka_consumer import HangarStackConsumer
+from hangar_stack.hangar_kafka.kafka_config import TOPICS
 
 def test_flask_aircraft_view():
     """Test if Flask app sends aircraft view events"""
@@ -53,7 +53,7 @@ def test_direct_kafka():
     """Test direct Kafka producer"""
     print("\n🧪 Testing Direct Kafka Producer...")
     
-    from kafka_producer import HangarStackProducer
+    from hangar_stack.hangar_kafka.kafka_producer import HangarStackProducer
     
     producer = HangarStackProducer()
     producer.send_aircraft_view('TEST-DIRECT', '127.0.0.1', 'Test-Agent')
