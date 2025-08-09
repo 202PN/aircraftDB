@@ -12,29 +12,35 @@
 
 <div class="text-center mb-5">
     <h1 class="page-title">
-        <i class="fa-solid fa-jet-fighter"></i> {{ manufacturer }}
+        <i class="fas fa-jet-fighter"></i> {{ manufacturer }}
     </h1>
-    <p class="page-subtitle">Aircraft fleet overview and specifications</p>
+    <p class="page-subtitle">Advanced Aircraft Systems Database</p>
 </div>
 
 <!-- Summary Statistics -->
-<div class="stats-grid">
+<div class="stats-grid mb-5">
     <div class="stat-card">
-        <div class="stat-number text-primary">{{ total }}</div>
-        <div class="stat-label">Total Aircraft</div>
+        <div class="stat-number" style="color: #00d4ff; font-family: 'Orbitron', monospace; font-size: 2.5rem; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);">{{ total }}</div>
+        <div class="stat-label" style="color: #00d4ff; font-family: 'Share Tech Mono', monospace; text-transform: uppercase; letter-spacing: 2px;">Total Aircraft</div>
     </div>
     <div class="stat-card">
-        <div class="stat-number status-active">{{ active }}</div>
-        <div class="stat-label">Active</div>
+        <div class="stat-number" style="color: #00ff00; font-family: 'Orbitron', monospace; font-size: 2.5rem; text-shadow: 0 0 20px rgba(0, 255, 0, 0.8);">{{ active }}</div>
+        <div class="stat-label" style="color: #00ff00; font-family: 'Share Tech Mono', monospace; text-transform: uppercase; letter-spacing: 2px;">Active</div>
     </div>
     <div class="stat-card">
-        <div class="stat-number status-retired">{{ retired }}</div>
-        <div class="stat-label">Retired</div>
+        <div class="stat-number" style="color: #ff4444; font-family: 'Orbitron', monospace; font-size: 2.5rem; text-shadow: 0 0 20px rgba(255, 68, 68, 0.8);">{{ retired }}</div>
+        <div class="stat-label" style="color: #ff4444; font-family: 'Share Tech Mono', monospace; text-transform: uppercase; letter-spacing: 2px;">Retired</div>
     </div>
     <div class="stat-card">
-        <div class="stat-number status-development">{{ development }}</div>
-        <div class="stat-label">In Development</div>
+        <div class="stat-number" style="color: #ffaa00; font-family: 'Orbitron', monospace; font-size: 2.5rem; text-shadow: 0 0 20px rgba(255, 170, 0, 0.8);">{{ development }}</div>
+        <div class="stat-label" style="color: #ffaa00; font-family: 'Share Tech Mono', monospace; text-transform: uppercase; letter-spacing: 2px;">Development</div>
     </div>
+</div>
+
+<div class="text-center mb-4">
+    <h2 style="color: #00d4ff; font-weight: 600; font-family: 'Orbitron', monospace; text-transform: uppercase; letter-spacing: 3px; font-size: 2rem; text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);">
+        <i class="fas fa-list"></i> Aircraft Inventory
+    </h2>
 </div>
 
 <!-- Aircraft Grid -->
@@ -44,18 +50,18 @@
         {% if aircraft.image %}
             <img src="{{ url_for('static', filename='images/' ~ aircraft.image) }}" alt="{{ aircraft.designation }}" class="aircraft-image">
         {% else %}
-            <div style="width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #001122, #003366); color: #00d4ff; font-family: 'Orbitron', monospace; font-size: 2rem; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);">
+            <div style="width: 100%; height: 220px; display: flex; align-items: center; justify-content: center; background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1) 0%, rgba(0, 0, 0, 0.9) 70%); color: #00d4ff; font-family: 'Orbitron', monospace; font-size: 3rem; text-shadow: 0 0 30px rgba(0, 212, 255, 0.8); border: 2px solid rgba(0, 212, 255, 0.3);">
                 <i class="fas fa-plane"></i>
             </div>
         {% endif %}
         <div class="aircraft-title">
-            <i class="fas fa-plane text-primary"></i>
+            <i class="fas fa-fighter-jet" style="color: #00d4ff; margin-right: 0.5rem;"></i>
             {{ aircraft.designation }} {{ aircraft.name }}
         </div>
         <div class="aircraft-subtitle">
-            <i class="fas fa-calendar"></i> {{ aircraft.introduction_year }}
+            <i class="fas fa-calendar" style="margin-right: 0.5rem;"></i> {{ aircraft.introduction_year }}
             {% if aircraft.type %}
-            <br><i class="fas fa-tag"></i> {{ aircraft.type }}
+            <br><i class="fas fa-tag" style="margin-right: 0.5rem;"></i> {{ aircraft.type }}
             {% endif %}
         </div>
         <div class="mb-3">
@@ -73,7 +79,7 @@
         {% endif %}
         <a href="{{ url_for('aircraft_detail', manufacturer_name=manufacturer, designation=aircraft.designation|urlencode) }}" 
            class="btn btn-primary">
-            <i class="fas fa-info-circle"></i> View Details
+            <i class="fas fa-search"></i> Analyze
         </a>
     </div>
     {% endfor %}

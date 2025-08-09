@@ -27,17 +27,41 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(10, 20, 40, 0.65); /* Optional: dark overlay for readability */
+            background: 
+                radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                rgba(0, 0, 0, 0.8);
             z-index: 0;
+        }
+        .welcome-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 212, 255, 0.03) 2px,
+                rgba(0, 212, 255, 0.03) 4px
+            );
+            pointer-events: none;
+            z-index: 1;
+            animation: scanLines 0.1s linear infinite;
+        }
+        @keyframes scanLines {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
         }
         .welcome-logo, .welcome-title, .enter-btn {
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
         .welcome-logo {
             height: 500px;
             max-width: 90vw;
-            filter: drop-shadow(0 0 60px #00d4ff88);
+            filter: 
+                drop-shadow(0 0 60px rgba(0, 212, 255, 0.8))
+                drop-shadow(0 0 120px rgba(0, 212, 255, 0.4));
             animation: floatImage 3s ease-in-out infinite;
             transition: transform 1.2s cubic-bezier(.4,2,.3,1), opacity 1.2s cubic-bezier(.4,2,.3,1);
         }
@@ -63,42 +87,89 @@
             font-size: 2.5rem;
             color: #00d4ff;
             margin-bottom: 2rem;
-            text-shadow: 0 0 30px #00d4ff88;
+            text-shadow: 
+                0 0 30px rgba(0, 212, 255, 0.8),
+                0 0 60px rgba(0, 212, 255, 0.6),
+                0 0 90px rgba(0, 212, 255, 0.4);
             letter-spacing: 3px;
             text-transform: uppercase;
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+        @keyframes titleGlow {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 30px rgba(0, 212, 255, 0.8),
+                    0 0 60px rgba(0, 212, 255, 0.6),
+                    0 0 90px rgba(0, 212, 255, 0.4);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 40px rgba(0, 212, 255, 1),
+                    0 0 80px rgba(0, 212, 255, 0.8),
+                    0 0 120px rgba(0, 212, 255, 0.6);
+            }
         }
         .enter-btn {
             font-family: 'Orbitron', monospace;
             font-size: 1.5rem;
             padding: 1rem 3rem;
-            border-radius: 2rem;
-            background: linear-gradient(135deg, #001122, #003366);
+            border-radius: 0;
+            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 100, 200, 0.8) 100%);
             color: #00d4ff;
-            border: 2px solid #00d4ff;
-            box-shadow: 0 0 30px #00d4ff44;
+            border: 3px solid #00d4ff;
+            box-shadow: 
+                0 0 40px rgba(0, 212, 255, 0.5),
+                inset 0 0 40px rgba(0, 212, 255, 0.1);
             transition: all 0.3s cubic-bezier(.4,2,.3,1);
             text-transform: uppercase;
             letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+        .enter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
+            transition: left 0.5s ease;
         }
         .enter-btn:hover, .enter-btn:focus {
-            background: linear-gradient(135deg, #003366, #004488);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.4) 0%, rgba(0, 150, 255, 1) 100%);
             color: #fff;
-            box-shadow: 0 0 60px #00d4ff99;
+            box-shadow: 
+                0 0 80px rgba(0, 212, 255, 0.8),
+                inset 0 0 80px rgba(0, 212, 255, 0.2);
             transform: translateY(-4px) scale(1.04);
+            border-color: #ffffff;
+        }
+        .enter-btn:hover::before {
+            left: 100%;
         }
     </style>
 </head>
 <body>
     <div class="welcome-container">
         <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HangarStack Logo" class="welcome-logo">
-        <div class="welcome-title">Welcome to HangarStack</div>
-        <a href="{{ url_for('home') }}" class="enter-btn">Enter</a>
+        <div class="welcome-title">
+            <i class="fas fa-satellite-dish"></i> HangarStack Online
+        </div>
+        <a href="{{ url_for('home') }}" class="enter-btn">
+            <i class="fas fa-power-off"></i> Initialize System
+        </a>
     </div>
     <script>
     document.querySelector('.enter-btn').addEventListener('click', function(e) {
         e.preventDefault();
         const logo = document.querySelector('.welcome-logo');
+        const title = document.querySelector('.welcome-title');
         logo.classList.add('fly-away');
+        title.style.transition = 'all 1.2s cubic-bezier(.4,2,.3,1)';
+        title.style.opacity = '0';
+        title.style.transform = 'translateY(-100px)';
         setTimeout(() => {
             window.location.href = this.href;
         }, 1100); // match animation duration

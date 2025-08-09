@@ -7,15 +7,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
+    <!-- Arc Reactor Loading Animation -->
+    <div class="arc-reactor" id="arcReactor"></div>
+    
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="arc-reactor active"></div>
+    </div>
+
     <nav class="navbar navbar-expand-lg">
-        <div class="container d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
-            <a class="navbar-brand mx-auto" href="{{ url_for('home') }}" style="display: flex; align-items: center; justify-content: center; width: 100%; flex-direction: column;">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HangarStack Logo" style="height: 250px; display: block; margin: 0 auto;">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="{{ url_for('home') }}" style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HangarStack Logo" style="height: 200px; display: block; margin: 0 auto; filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.6));">
+                <div style="font-family: 'Orbitron', monospace; font-size: 1.2rem; color: #00d4ff; text-shadow: 0 0 20px rgba(0, 212, 255, 0.8); margin-top: 0.5rem; letter-spacing: 3px;">HANGARSTACK</div>
             </a>
-            <div class="w-100 d-flex justify-content-center">
-                <a class="nav-link" href="{{ url_for('home') }}" style="font-size: 1.5rem; font-weight: 700; color: #00d4ff; text-align: center;">Home</a>
+            <div class="w-100 d-flex justify-content-center mt-3">
+                <a class="nav-link hud-element" href="{{ url_for('home') }}" style="font-size: 1.2rem; font-weight: 700; color: #00d4ff; text-align: center; padding: 0.5rem 2rem; font-family: 'Share Tech Mono', monospace; text-transform: uppercase; letter-spacing: 2px;">
+                    <i class="fas fa-home"></i> Home
+                </a>
             </div>
         </div>
     </nav>
@@ -27,5 +40,43 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Arc Reactor Loading Animation
+        function showArcReactor() {
+            const reactor = document.getElementById('arcReactor');
+            reactor.classList.add('active');
+            setTimeout(() => {
+                reactor.classList.remove('active');
+            }, 2000);
+        }
+
+        // Page transition effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add entrance animations
+            const cards = document.querySelectorAll('.card, .aircraft-card, .manufacturer-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+        // Enhanced link transitions
+        document.querySelectorAll('a[href^="/"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (!e.ctrlKey && !e.metaKey) {
+                    e.preventDefault();
+                    const overlay = document.getElementById('loadingOverlay');
+                    overlay.classList.add('active');
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 800);
+                }
+            });
+        });
+    </script>
 </body>
 </html> 
